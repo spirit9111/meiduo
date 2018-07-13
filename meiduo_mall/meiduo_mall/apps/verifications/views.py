@@ -10,13 +10,16 @@ from django_redis import get_redis_connection
 # GET image_code/(?P<image_code_id>)
 from apps.verifications.constants import IMAGE_CODE_REDIS_EXPIRES
 from libs.captcha.captcha import captcha
+from utils.exceptions import logger
 
 
-class ImageColdView(APIView):
+class ImageCodeView(APIView):
 	"""图片验证码接口"""
 
 	def get(self, request, image_code_id):
 		text, image = captcha.generate_captcha()
+		logger.error('--->[图片验证码:[%s]<---' % text)
+		logger.error('--->[UUID:[%s]<---' % image_code_id)
 		redis_conn = get_redis_connection('verify_codes')
 		redis_conn.setex('img_%s' % image_code_id, IMAGE_CODE_REDIS_EXPIRES, text)
-		return HttpResponse(image, content_type='image/jpg')
+		return HttpResponse(image, content_type='images/jpg')
