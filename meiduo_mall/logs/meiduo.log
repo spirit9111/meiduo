@@ -108,3 +108,578 @@ INFO 2018-07-13 11:25:17,684 basehttp 124 "GET /image_code/368a877f-329e-441f-9e
 ERROR 2018-07-13 11:25:17,872 views 21 --->[图片验证码:[ZMF9]<---
 ERROR 2018-07-13 11:25:17,873 views 22 --->[UUID:[593f7fcb-7434-42f0-9c6b-4e8cd0766248]<---
 INFO 2018-07-13 11:25:17,874 basehttp 124 "GET /image_code/593f7fcb-7434-42f0-9c6b-4e8cd0766248/ HTTP/1.1" 200 3160
+ERROR 2018-07-13 12:12:22,382 views 22 --->图片验证码:[BS3Q]<---
+ERROR 2018-07-13 12:12:22,388 views 23 --->UUID:[dc9c08b6-c831-4baf-a272-9d84a1f3a008]<---
+INFO 2018-07-13 12:12:22,404 basehttp 124 "GET /image_code/dc9c08b6-c831-4baf-a272-9d84a1f3a008/ HTTP/1.1" 200 3024
+WARNING 2018-07-13 12:14:01,602 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:14:01,602 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2482
+WARNING 2018-07-13 12:15:16,122 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:15:16,122 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2482
+WARNING 2018-07-13 12:15:17,184 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:15:17,185 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2482
+WARNING 2018-07-13 12:15:28,251 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:15:28,252 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2482
+WARNING 2018-07-13 12:15:28,626 base 152 Not Found: /favicon.ico
+WARNING 2018-07-13 12:15:28,627 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2387
+ERROR 2018-07-13 12:15:49,177 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'mobile'
+ERROR 2018-07-13 12:15:49,304 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 500 93361
+ERROR 2018-07-13 12:16:29,233 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'mobile'
+ERROR 2018-07-13 12:16:29,507 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 500 95634
+ERROR 2018-07-13 12:16:32,602 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'mobile'
+ERROR 2018-07-13 12:16:32,829 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 500 95635
+WARNING 2018-07-13 12:17:29,287 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:17:29,291 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:17:30,801 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:17:30,802 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:17:31,767 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:17:31,769 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:17:46,296 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:17:46,297 basehttp 124 "GET /sms_code/13100000000/?image_code_id=dc9c08b6-c831-4baf-a272-9d84a1f3a008&text=BS3Q HTTP/1.1" 404 2481
+ERROR 2018-07-13 12:17:51,988 views 22 --->图片验证码:[YSDO]<---
+ERROR 2018-07-13 12:17:51,989 views 23 --->UUID:[572cce25-20a8-46a2-9037-e6fcd975fb30]<---
+INFO 2018-07-13 12:17:51,997 basehttp 124 "GET /image_code/572cce25-20a8-46a2-9037-e6fcd975fb30/ HTTP/1.1" 200 3097
+WARNING 2018-07-13 12:18:14,825 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:18:14,828 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:20:06,132 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:20:06,133 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:21:01,673 base 152 Not Found: /
+WARNING 2018-07-13 12:21:01,673 basehttp 124 "GET / HTTP/1.1" 404 2335
+WARNING 2018-07-13 12:21:03,778 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:21:03,778 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 404 2481
+WARNING 2018-07-13 12:23:02,502 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:23:02,502 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 404 2490
+ERROR 2018-07-13 12:23:16,663 views 22 --->图片验证码:[XXJ8]<---
+ERROR 2018-07-13 12:23:16,663 views 23 --->UUID:[e35471f7-5a79-473c-82be-f5e4165cec81]<---
+INFO 2018-07-13 12:23:16,666 basehttp 124 "GET /image_code/e35471f7-5a79-473c-82be-f5e4165cec81/ HTTP/1.1" 200 3188
+WARNING 2018-07-13 12:23:37,402 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:23:37,402 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 404 2490
+ERROR 2018-07-13 12:24:37,114 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:24:37,231 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 500 120229
+ERROR 2018-07-13 12:24:38,363 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:24:38,450 basehttp 124 "GET /sms_code/13100000000/?image_code_id=572cce25-20a8-46a2-9037-e6fcd975fb30&text=YSDO HTTP/1.1" 500 120229
+ERROR 2018-07-13 12:24:52,735 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:24:52,805 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 500 120094
+ERROR 2018-07-13 12:25:50,653 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:25:50,986 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 500 122502
+ERROR 2018-07-13 12:25:54,421 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:25:54,688 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 500 122503
+WARNING 2018-07-13 12:26:55,813 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:26:55,818 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 404 2438
+WARNING 2018-07-13 12:26:57,144 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:26:57,145 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 404 2438
+ERROR 2018-07-13 12:27:49,690 exception 135 Internal Server Error: /sms_code/13100000000/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 39, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 19, in validate
+    redis_conn = get_redis_connection('verify_code')
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django_redis/__init__.py", line 14, in get_redis_connection
+    cache = caches[alias]
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/cache/__init__.py", line 77, in __getitem__
+    "Could not find config for '%s' in settings.CACHES" % alias
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find config for 'verify_code' in settings.CACHES
+ERROR 2018-07-13 12:27:50,040 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 500 122582
+WARNING 2018-07-13 12:28:35,535 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 400 9959
+WARNING 2018-07-13 12:28:53,526 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 400 9959
+WARNING 2018-07-13 12:28:54,973 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 400 9959
+WARNING 2018-07-13 12:28:55,993 basehttp 124 "GET /sms_code/13100000000/?image_code_id=e35471f7-5a79-473c-82be-f5e4165cec81&text=XXJ8 HTTP/1.1" 400 9959
+ERROR 2018-07-13 12:29:37,445 views 22 --->图片验证码:[VEGD]<---
+ERROR 2018-07-13 12:29:37,446 views 23 --->UUID:[cad1e4b2-f214-4c21-8672-01ea19b97aab]<---
+INFO 2018-07-13 12:29:37,450 basehttp 124 "GET /image_code/cad1e4b2-f214-4c21-8672-01ea19b97aab/ HTTP/1.1" 200 3224
+WARNING 2018-07-13 12:30:04,178 basehttp 124 "GET /sms_code/13100000000/?image_code_id=cad1e4b2-f214-4c21-8672-01ea19b97aab&text=VEGD HTTP/1.1" 400 52
+ERROR 2018-07-13 12:31:05,420 views 22 --->图片验证码:[ZRKN]<---
+ERROR 2018-07-13 12:31:05,421 views 23 --->UUID:[cbe4c282-9dd2-4b0c-a201-c3b412a3cdfd]<---
+INFO 2018-07-13 12:31:05,430 basehttp 124 "GET /image_code/cbe4c282-9dd2-4b0c-a201-c3b412a3cdfd/ HTTP/1.1" 200 3164
+ERROR 2018-07-13 12:31:20,889 views 42 --->短信验证码:[463258]<---
+INFO 2018-07-13 12:31:21,107 basehttp 124 "GET /sms_code/13100000000/?image_code_id=cbe4c282-9dd2-4b0c-a201-c3b412a3cdfd&text=ZRKN HTTP/1.1" 200 16
+ERROR 2018-07-13 12:33:23,540 views 22 --->图片验证码:[ZEUZ]<---
+ERROR 2018-07-13 12:33:23,541 views 23 --->UUID:[6fe816c3-d5aa-4542-bbf3-7730544ddca3]<---
+INFO 2018-07-13 12:33:23,556 basehttp 124 "GET /image_code/6fe816c3-d5aa-4542-bbf3-7730544ddca3/ HTTP/1.1" 200 3292
+ERROR 2018-07-13 12:33:40,708 views 36 150
+ERROR 2018-07-13 12:33:40,711 views 43 --->短信验证码:[002913]<---
+INFO 2018-07-13 12:34:03,114 basehttp 124 "GET /sms_code/15071176826/?image_code_id=6fe816c3-d5aa-4542-bbf3-7730544ddca3&text=ZEUZ HTTP/1.1" 200 16
+ERROR 2018-07-13 12:34:54,974 views 22 --->图片验证码:[GABR]<---
+ERROR 2018-07-13 12:34:54,976 views 23 --->UUID:[abbfe13d-f13e-4df8-b4e6-5122938314f0]<---
+INFO 2018-07-13 12:34:54,989 basehttp 124 "GET /image_code/abbfe13d-f13e-4df8-b4e6-5122938314f0/ HTTP/1.1" 200 3224
+ERROR 2018-07-13 12:36:17,735 views 22 --->图片验证码:[RDTF]<---
+ERROR 2018-07-13 12:36:17,737 views 23 --->UUID:[be2db7b3-f4d2-47c8-b374-d4aff4be8af0]<---
+INFO 2018-07-13 12:36:17,763 basehttp 124 "GET /image_code/be2db7b3-f4d2-47c8-b374-d4aff4be8af0/ HTTP/1.1" 200 2828
+WARNING 2018-07-13 12:36:35,443 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:36:35,446 basehttp 124 "GET /sms_code/15071176826/?image_code_id=be2db7b3-f4d2-47c8-b374-d4aff4be8af0&text=RDTF HTTP/1.1" 404 2489
+ERROR 2018-07-13 12:37:50,465 views 22 --->图片验证码:[QABH]<---
+ERROR 2018-07-13 12:37:50,465 views 23 --->UUID:[3051563c-9d7c-4953-8860-d380c6f4fbc7]<---
+INFO 2018-07-13 12:37:50,488 basehttp 124 "GET /image_code/3051563c-9d7c-4953-8860-d380c6f4fbc7/ HTTP/1.1" 200 3553
+WARNING 2018-07-13 12:38:23,359 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:38:23,362 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:39:01,660 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:39:01,661 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+ERROR 2018-07-13 12:41:50,044 views 22 --->图片验证码:[3KEX]<---
+ERROR 2018-07-13 12:41:50,045 views 23 --->UUID:[cdc556ea-14f2-4fec-9aaf-e3a53e91beaa]<---
+INFO 2018-07-13 12:41:50,047 basehttp 124 "GET /image_code/cdc556ea-14f2-4fec-9aaf-e3a53e91beaa/ HTTP/1.1" 200 3333
+WARNING 2018-07-13 12:42:15,010 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:42:15,011 basehttp 124 "GET /sms_code/15071176826/?image_code_id=cdc556ea-14f2-4fec-9aaf-e3a53e91beaa&text=3KEX HTTP/1.1" 404 2489
+ERROR 2018-07-13 12:43:03,520 views 36 15071176826
+ERROR 2018-07-13 12:43:03,526 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 20, in validate
+    real_text = redis_conn.get('img_%s' % image_code_id).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2018-07-13 12:43:03,655 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 500 112610
+ERROR 2018-07-13 12:43:04,790 views 36 15071176826
+ERROR 2018-07-13 12:43:04,792 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 20, in validate
+    real_text = redis_conn.get('img_%s' % image_code_id).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2018-07-13 12:43:04,861 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 500 112610
+ERROR 2018-07-13 12:43:05,897 views 36 15071176826
+ERROR 2018-07-13 12:43:05,898 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 20, in validate
+    real_text = redis_conn.get('img_%s' % image_code_id).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2018-07-13 12:43:05,969 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 500 112610
+ERROR 2018-07-13 12:43:06,633 views 36 15071176826
+ERROR 2018-07-13 12:43:06,643 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 20, in validate
+    real_text = redis_conn.get('img_%s' % image_code_id).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2018-07-13 12:43:06,718 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 500 112610
+ERROR 2018-07-13 12:43:08,314 views 36 15071176826
+ERROR 2018-07-13 12:43:08,318 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 20, in validate
+    real_text = redis_conn.get('img_%s' % image_code_id).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2018-07-13 12:43:08,397 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 500 112610
+ERROR 2018-07-13 12:44:18,229 views 36 15071176826
+WARNING 2018-07-13 12:44:18,292 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 9959
+ERROR 2018-07-13 12:44:21,838 views 36 15071176826
+WARNING 2018-07-13 12:44:21,866 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 9959
+WARNING 2018-07-13 12:44:37,016 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:44:37,017 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:44:38,318 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:44:38,318 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:44:39,393 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:44:39,393 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:45:21,303 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:45:21,304 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:45:25,423 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:45:25,424 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 404 2489
+ERROR 2018-07-13 12:45:46,016 views 22 --->图片验证码:[UXPD]<---
+ERROR 2018-07-13 12:45:46,016 views 23 --->UUID:[9f741818-0369-429c-99a2-02bad923f639]<---
+INFO 2018-07-13 12:45:46,020 basehttp 124 "GET /image_code/9f741818-0369-429c-99a2-02bad923f639/ HTTP/1.1" 200 3123
+ERROR 2018-07-13 12:47:15,913 views 36 15071176826
+WARNING 2018-07-13 12:47:15,959 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 9959
+ERROR 2018-07-13 12:47:34,446 views 36 15071176826
+WARNING 2018-07-13 12:47:34,448 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 46
+ERROR 2018-07-13 12:48:59,890 views 22 --->图片验证码:[ODQX]<---
+ERROR 2018-07-13 12:48:59,899 views 23 --->UUID:[4a0fc9cd-6cbb-4795-b90e-d51fa132eec5]<---
+INFO 2018-07-13 12:48:59,908 basehttp 124 "GET /image_code/4a0fc9cd-6cbb-4795-b90e-d51fa132eec5/ HTTP/1.1" 200 3174
+ERROR 2018-07-13 12:49:19,988 views 36 15071176826
+ERROR 2018-07-13 12:49:20,006 exception 135 Internal Server Error: /sms_code/15071176826/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/views.py", line 40, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/verifications/serializers.py", line 25, in validate
+    if text.lower() != real_text.decode().docode():
+AttributeError: 'str' object has no attribute 'docode'
+ERROR 2018-07-13 12:49:20,068 basehttp 124 "GET /sms_code/15071176826/?image_code_id=4a0fc9cd-6cbb-4795-b90e-d51fa132eec5&text=ODQX HTTP/1.1" 500 18528
+ERROR 2018-07-13 12:49:52,261 views 36 15071176826
+ERROR 2018-07-13 12:49:52,266 views 43 --->短信验证码:[003018]<---
+INFO 2018-07-13 12:49:52,267 basehttp 124 "GET /sms_code/15071176826/?image_code_id=4a0fc9cd-6cbb-4795-b90e-d51fa132eec5&text=ODQX HTTP/1.1" 200 16
+ERROR 2018-07-13 12:49:53,417 views 36 15071176826
+ERROR 2018-07-13 12:49:53,422 views 43 --->短信验证码:[088791]<---
+INFO 2018-07-13 12:49:53,423 basehttp 124 "GET /sms_code/15071176826/?image_code_id=4a0fc9cd-6cbb-4795-b90e-d51fa132eec5&text=ODQX HTTP/1.1" 200 16
+ERROR 2018-07-13 12:50:12,742 views 22 --->图片验证码:[HPKZ]<---
+ERROR 2018-07-13 12:50:12,742 views 23 --->UUID:[a5bdb6fa-c9d2-430f-a06a-121dca9f7a6d]<---
+INFO 2018-07-13 12:50:12,748 basehttp 124 "GET /image_code/a5bdb6fa-c9d2-430f-a06a-121dca9f7a6d/ HTTP/1.1" 200 3031
+ERROR 2018-07-13 12:50:30,116 views 36 15071176826
+ERROR 2018-07-13 12:50:30,122 views 43 --->短信验证码:[693587]<---
+INFO 2018-07-13 12:50:30,132 basehttp 124 "GET /sms_code/15071176826/?image_code_id=a5bdb6fa-c9d2-430f-a06a-121dca9f7a6d&text=HPKZ HTTP/1.1" 200 16
+ERROR 2018-07-13 12:51:15,348 views 22 --->图片验证码:[BQQU]<---
+ERROR 2018-07-13 12:51:15,348 views 23 --->UUID:[373e6a55-9466-4d91-bc73-a7d262a97ffa]<---
+INFO 2018-07-13 12:51:15,358 basehttp 124 "GET /image_code/373e6a55-9466-4d91-bc73-a7d262a97ffa/ HTTP/1.1" 200 3473
+WARNING 2018-07-13 12:51:34,793 base 152 Not Found: /sms_code/15071176826/
+WARNING 2018-07-13 12:51:34,794 basehttp 124 "GET /sms_code/15071176826/?image_code_id=373e6a55-9466-4d91-bc73-a7d262a97ffa&text=BQQU HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:51:52,428 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:51:52,428 basehttp 124 "GET /sms_code/13100000000/?image_code_id=373e6a55-9466-4d91-bc73-a7d262a97ffa&text=BQQU HTTP/1.1" 404 2489
+WARNING 2018-07-13 12:51:53,247 base 152 Not Found: /sms_code/13100000000/
+WARNING 2018-07-13 12:51:53,248 basehttp 124 "GET /sms_code/13100000000/?image_code_id=373e6a55-9466-4d91-bc73-a7d262a97ffa&text=BQQU HTTP/1.1" 404 2489
+ERROR 2018-07-13 12:53:03,308 views 36 15071176826
+WARNING 2018-07-13 12:53:03,357 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 9959
+ERROR 2018-07-13 12:53:04,544 views 36 15071176826
+WARNING 2018-07-13 12:53:04,581 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3051563c-9d7c-4953-8860-d380c6f4fbc7&text=QABH HTTP/1.1" 400 9959
+ERROR 2018-07-13 12:53:07,880 views 36 13100000000
+ERROR 2018-07-13 12:53:07,882 views 43 --->短信验证码:[974734]<---
+INFO 2018-07-13 12:53:07,885 basehttp 124 "GET /sms_code/13100000000/?image_code_id=373e6a55-9466-4d91-bc73-a7d262a97ffa&text=BQQU HTTP/1.1" 200 16
+ERROR 2018-07-13 12:53:08,725 views 36 13100000000
+ERROR 2018-07-13 12:53:08,728 views 43 --->短信验证码:[818622]<---
+INFO 2018-07-13 12:53:08,731 basehttp 124 "GET /sms_code/13100000000/?image_code_id=373e6a55-9466-4d91-bc73-a7d262a97ffa&text=BQQU HTTP/1.1" 200 16
+ERROR 2018-07-13 12:53:26,035 views 22 --->图片验证码:[JTFA]<---
+ERROR 2018-07-13 12:53:26,036 views 23 --->UUID:[a5b80351-332d-4ded-977f-24f4df3fe17a]<---
+INFO 2018-07-13 12:53:26,054 basehttp 124 "GET /image_code/a5b80351-332d-4ded-977f-24f4df3fe17a/ HTTP/1.1" 200 3349
+ERROR 2018-07-13 12:54:06,191 views 36 15071176826
+ERROR 2018-07-13 12:54:16,382 views 43 --->短信验证码:[274853]<---
+INFO 2018-07-13 12:54:22,967 basehttp 124 "GET /sms_code/15071176826/?image_code_id=a5b80351-332d-4ded-977f-24f4df3fe17a&text=JTFA HTTP/1.1" 200 16
+ERROR 2018-07-13 12:56:25,873 views 22 --->图片验证码:[NYOS]<---
+ERROR 2018-07-13 12:56:25,874 views 23 --->UUID:[3228b00d-d6c4-4e25-a96f-42e060a294d6]<---
+INFO 2018-07-13 12:56:25,886 basehttp 124 "GET /image_code/3228b00d-d6c4-4e25-a96f-42e060a294d6/ HTTP/1.1" 200 3202
+ERROR 2018-07-13 12:56:42,103 views 36 15071176826
+ERROR 2018-07-13 12:56:42,106 views 43 --->短信验证码:[135892]<---
+INFO 2018-07-13 12:56:42,501 basehttp 124 "GET /sms_code/15071176826/?image_code_id=3228b00d-d6c4-4e25-a96f-42e060a294d6&text=NYOS HTTP/1.1" 200 16
