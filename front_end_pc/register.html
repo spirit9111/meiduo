@@ -52,15 +52,6 @@
 						<img :src="image_code_url" alt="图形验证码" class="pic_code" @click="generate_image_code">
 						<span v-show="error_image_code" class="error_tip">{{error_image_code_message}}</span>
 					</li>
-
-
-					<!--<li>-->
-					<!--<label>短信验证码:</label>-->
-					<!--<input type="text" v-model="sms_code" @blur="check_sms_code" name="msg_code" id="a"-->
-					<!--class="msg_input">-->
-					<!--<a href="#" class="get_msg_code">获取短信验证码</a>-->
-					<!--<span v-show="error_sms_code" class="error_tip">请填写短信验证码</span>-->
-					<!--</li>-->
 					<li>
 						<label>短信验证码:</label>
 						<input type="text" v-model="sms_code" @blur="check_sms_code" name="msg_code" id="msg_code"

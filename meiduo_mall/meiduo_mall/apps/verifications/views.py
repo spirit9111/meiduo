@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
 
+from celery_tasks.sms.task import send_to_mes
 from meiduo_mall.libs.captcha.captcha import captcha
 from meiduo_mall.utils.exceptions import logger
 from verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
@@ -54,4 +55,6 @@ class SmsCodeView(GenericAPIView):
 		# 	send_mes.send_2_mes(mobile, sms_code)
 		# except Exceptione:
 		# 	logger.error(e)
+		# 异步发短信
+		send_to_mes.delay(mobile, sms_code)
 		return Response({'message': 'OK'})
