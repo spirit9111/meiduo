@@ -1,11 +1,11 @@
 import random
 
 from django.http import HttpResponse
+from celery_tasks.sms.tasks import send_to_mes
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
 
-from celery_tasks.sms.task import send_to_mes
 from meiduo_mall.libs.captcha.captcha import captcha
 from meiduo_mall.utils.exceptions import logger
 from verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
