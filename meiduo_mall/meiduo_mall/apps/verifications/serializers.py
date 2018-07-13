@@ -2,7 +2,7 @@
 from django_redis import get_redis_connection
 from rest_framework import serializers
 
-from utils.exceptions import logger
+from meiduo_mall.utils.exceptions import logger
 
 
 class CheckImageCodeSerializer(serializers.Serializer):

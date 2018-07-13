@@ -4,11 +4,12 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
-from apps.verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
-from apps.verifications.serializers import CheckImageCodeSerializer
-from libs.captcha.captcha import captcha
-from libs.dysms_python.send_2_mes import SendMes
-from utils.exceptions import logger
+
+from meiduo_mall.libs.captcha.captcha import captcha
+from meiduo_mall.utils.exceptions import logger
+from verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
+from verifications.serializers import CheckImageCodeSerializer
+
 from rest_framework.generics import GenericAPIView
 
 

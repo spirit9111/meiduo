@@ -161,17 +161,69 @@ var vm = new Vue({
 					})
 					.catch(error => {
 						alert('error')
-						// if (error.response.status == 400) {
-						// 	this.error_image_code_message = '图片验证码有误';
-						// 	this.error_image_code = true;
-						// } else {
-						// 	console.log(error.response.data);
-						// }
-						// this.sending_flag = false;
+						if (error.response.status == 400) {
+							this.error_image_code_message = '图片验证码有误';
+							this.error_image_code = true;
+						} else {
+							console.log(error.response.data);
+						}
+						this.sending_flag = false;
 					})
-		}
+		},
+		//教研用户名是否存在
+		check_username: function () {
+			var len = this.username.length;
+			if (len < 5 || len > 20) {
+				this.error_name = true;
+				this.error_name_message = '请输入5-20个字符的用户名';
+			} else {
+				this.error_name = false;
+			}
+			// 检查重名
+			if (this.error_name == false) {
+				alert(333)
+				axios.get('http://127.0.0.1:8000/usernames/' + this.username + '/count/', {
+					responseType: 'json'
+				})
+						.then(response => {
+							if (response.data.count > 0) {
+								this.error_name_message = '用户名已存在';
+								this.error_name = true;
+							} else {
+								this.error_name = false;
+							}
+						})
+						.catch(error => {
+							console.log(error.response.data);
+						})
+			}
+		},
 
-	},
+		check_phone: function () {
+			var re = /^1[345789]\d{9}$/;
+			if (re.test(this.mobile)) {
+				this.error_phone = false;
+			} else {
+				this.error_phone_message = '您输入的手机号格式不正确';
+				this.error_phone = true;
+			}
+			if (this.error_phone == false) {
+				axios.get('http://127.0.0.1:8000/mobiles/' + this.mobile + '/count/', {
+					responseType: 'json'
+				})
+						.then(response => {
+							if (response.data.count > 0) {
+								this.error_phone_message = '手机号已存在';
+								this.error_phone = true;
+							} else {
+								this.error_phone = false;
+							}
+						})
+						.catch(error => {
+							console.log(error.response.data);
+						})
+			}
+		},
 
-
+	}
 });
