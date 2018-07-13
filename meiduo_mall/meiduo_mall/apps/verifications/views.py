@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_redis import get_redis_connection
-from apps.verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES
+from apps.verifications.constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from apps.verifications.serializers import CheckImageCodeSerializer
 from libs.captcha.captcha import captcha
 from libs.dysms_python.send_2_mes import SendMes
@@ -33,7 +33,6 @@ class SmsCodeView(GenericAPIView):
 	serializer_class = CheckImageCodeSerializer
 
 	def get(self, request, mobile):
-		logger.error(mobile)
 		# 需要校验的参数,{'image_code_id':xxx,'text':yyy}
 		data = request.query_params
 		serializer = self.get_serializer(data=data)
@@ -41,8 +40,13 @@ class SmsCodeView(GenericAPIView):
 		# 校验成功后,生成并保存真实的短信验证码到redis
 		sms_code = '%06d' % random.randint(0, 999999)
 		logger.error('--->短信验证码:[%s]<---' % sms_code)
+
 		redis_conn = get_redis_connection('verify_codes')
-		redis_conn.setex('sms_%s' % mobile, SMS_CODE_REDIS_EXPIRES, sms_code)
+		pl = redis_conn.pipeline()
+		pl.setex('sms_%s' % mobile, SMS_CODE_REDIS_EXPIRES, sms_code)
+		pl.setex("send_flag_%s" % mobile, SEND_SMS_CODE_INTERVAL, 1)
+		pl.execute()
+
 		# 发送短信
 		# try:
 		# 	send_mes = SendMes()
