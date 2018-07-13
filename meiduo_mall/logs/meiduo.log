@@ -1021,3 +1021,47 @@ Traceback (most recent call last):
 NameError: name 're' is not defined
 ERROR 2018-07-13 16:07:38,591 basehttp 124 "POST /register/ HTTP/1.1" 500 20938
 INFO 2018-07-13 16:08:29,512 basehttp 124 "POST /register/ HTTP/1.1" 201 51
+ERROR 2018-07-13 16:28:42,632 views 23 --->图片验证码:[XGFU]<---
+ERROR 2018-07-13 16:28:42,633 views 24 --->UUID:[34f391fe-5b3a-4f99-90ed-de1111b9f882]<---
+INFO 2018-07-13 16:28:42,643 basehttp 124 "GET /image_code/34f391fe-5b3a-4f99-90ed-de1111b9f882/ HTTP/1.1" 200 3177
+INFO 2018-07-13 16:28:50,074 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+ERROR 2018-07-13 16:29:02,684 views 23 --->图片验证码:[AHKM]<---
+ERROR 2018-07-13 16:29:02,685 views 24 --->UUID:[746a1075-7b6a-4dad-96ab-cab67d79d9b6]<---
+INFO 2018-07-13 16:29:02,686 basehttp 124 "GET /image_code/746a1075-7b6a-4dad-96ab-cab67d79d9b6/ HTTP/1.1" 200 3553
+ERROR 2018-07-13 16:29:03,779 views 23 --->图片验证码:[BM5J]<---
+ERROR 2018-07-13 16:29:03,780 views 24 --->UUID:[3639ffb5-d10d-4669-ae21-e92434636a7f]<---
+INFO 2018-07-13 16:29:03,784 basehttp 124 "GET /image_code/3639ffb5-d10d-4669-ae21-e92434636a7f/ HTTP/1.1" 200 3521
+INFO 2018-07-13 16:29:06,561 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+INFO 2018-07-13 16:29:21,150 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-13 16:29:37,161 serializers 19 {'request': <rest_framework.request.Request object at 0x7f6695318a20>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7f6695318898>}
+WARNING 2018-07-13 16:29:37,163 basehttp 124 "GET /sms_code/13311111111/?text=XGFU&image_code_id=3639ffb5-d10d-4669-ae21-e92434636a7f HTTP/1.1" 400 52
+INFO 2018-07-13 16:29:37,168 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-13 16:29:41,882 views 23 --->图片验证码:[S6I7]<---
+ERROR 2018-07-13 16:29:41,882 views 24 --->UUID:[d06bb2d2-fa22-4fd7-a224-1554814fc060]<---
+INFO 2018-07-13 16:29:41,883 basehttp 124 "GET /image_code/d06bb2d2-fa22-4fd7-a224-1554814fc060/ HTTP/1.1" 200 3024
+ERROR 2018-07-13 16:29:57,444 serializers 19 {'request': <rest_framework.request.Request object at 0x7f66948a2400>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7f66948a22e8>}
+ERROR 2018-07-13 16:29:57,454 views 43 --->短信验证码:[356913]<---
+INFO 2018-07-13 16:29:57,455 basehttp 124 "GET /sms_code/13311111111/?text=S6I7&image_code_id=d06bb2d2-fa22-4fd7-a224-1554814fc060 HTTP/1.1" 200 16
+INFO 2018-07-13 16:29:57,461 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-13 16:30:12,465 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2018-07-13 16:30:12,476 base 152 Not Found: /users/
+WARNING 2018-07-13 16:30:12,477 basehttp 124 "POST /users/ HTTP/1.1" 404 2978
+INFO 2018-07-13 16:30:12,482 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-13 16:30:12,484 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+WARNING 2018-07-13 16:30:22,707 base 152 Not Found: /users/
+WARNING 2018-07-13 16:30:22,708 basehttp 124 "POST /users/ HTTP/1.1" 404 2978
+INFO 2018-07-13 16:30:22,716 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+INFO 2018-07-13 16:30:22,717 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-13 16:31:03,567 views 23 --->图片验证码:[EUD6]<---
+ERROR 2018-07-13 16:31:03,567 views 24 --->UUID:[75a3e348-22bd-41b8-91aa-bd6c9829e8e3]<---
+INFO 2018-07-13 16:31:03,569 basehttp 124 "GET /image_code/75a3e348-22bd-41b8-91aa-bd6c9829e8e3/ HTTP/1.1" 200 3296
+INFO 2018-07-13 16:31:07,643 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+INFO 2018-07-13 16:31:15,924 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-13 16:31:30,921 serializers 19 {'request': <rest_framework.request.Request object at 0x7f6694092048>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7f6694089ef0>}
+ERROR 2018-07-13 16:31:30,922 views 43 --->短信验证码:[645997]<---
+INFO 2018-07-13 16:31:30,923 basehttp 124 "GET /sms_code/13311111111/?text=EUD6&image_code_id=75a3e348-22bd-41b8-91aa-bd6c9829e8e3 HTTP/1.1" 200 16
+INFO 2018-07-13 16:31:30,934 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-13 16:31:43,224 basehttp 124 "OPTIONS /register/ HTTP/1.1" 200 0
+INFO 2018-07-13 16:31:43,237 basehttp 124 "GET /mobiles/13311111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-13 16:31:43,240 basehttp 124 "GET /username/111111/count/ HTTP/1.1" 200 31
+INFO 2018-07-13 16:31:43,295 basehttp 124 "POST /register/ HTTP/1.1" 201 51

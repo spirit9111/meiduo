@@ -117,6 +117,31 @@ var vm = new Vue({
 			this.check_phone();
 			this.check_sms_code();
 			this.check_allow();
+			if (this.error_name == false && this.error_password == false && this.error_check_password == false
+					&& this.error_phone == false && this.error_sms_code == false && this.error_allow == false) {
+				axios.post('http://127.0.0.1:8000/register/', {
+					username: this.username,
+					password: this.password,
+					password2: this.password2,
+					mobile: this.mobile,
+					sms_code: this.sms_code,
+					allow: this.allow.toString()
+				}, {
+					responseType: 'json'
+				})
+						.then(response => {
+							location.href = '/index.html';
+						})
+						.catch(error => {
+							if (error.response.status == 400) {
+								this.error_sms_code_message = '短信验证码错误';
+								this.error_sms_code = true;
+							} else {
+								console.log(error.response.data);
+							}
+						})
+			}
+
 		},
 		send_sms_code: function () {
 			if (this.sending_flag == true) {
@@ -139,7 +164,6 @@ var vm = new Vue({
 				responseType: 'json'
 			})
 					.then(response => {
-						alert('ok')
 						// 表示后端发送短信成功
 						// 倒计时60秒，60秒后允许用户再次点击发送短信验证码的按钮
 						var num = 60;
@@ -181,8 +205,7 @@ var vm = new Vue({
 			}
 			// 检查重名
 			if (this.error_name == false) {
-				alert(333)
-				axios.get('http://127.0.0.1:8000/usernames/' + this.username + '/count/', {
+				axios.get('http://127.0.0.1:8000/username/' + this.username + '/count/', {
 					responseType: 'json'
 				})
 						.then(response => {
