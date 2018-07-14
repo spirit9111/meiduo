@@ -1319,3 +1319,18 @@ INFO 2018-07-14 20:18:35,768 basehttp 124 "GET /username/13100000000/count/ HTTP
 INFO 2018-07-14 20:18:35,771 basehttp 124 "GET /mobiles/13100000000/count/ HTTP/1.1" 200 34
 INFO 2018-07-14 20:18:35,817 basehttp 124 "POST /register/ HTTP/1.1" 201 236
 INFO 2018-07-14 20:19:04,341 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 207
+WARNING 2018-07-14 21:36:42,426 base 152 Not Found: /accounts/spirit/sms/soken
+WARNING 2018-07-14 21:36:42,427 basehttp 124 "GET /accounts/spirit/sms/soken HTTP/1.1" 404 3229
+WARNING 2018-07-14 21:37:04,214 base 152 Not Found: /accounts/spirit/sms/soken
+WARNING 2018-07-14 21:37:04,215 basehttp 124 "GET /accounts/spirit/sms/soken HTTP/1.1" 404 3229
+WARNING 2018-07-14 21:37:04,600 base 152 Not Found: /favicon.ico
+WARNING 2018-07-14 21:37:04,601 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2018-07-14 21:37:18,319 basehttp 124 "GET /accounts/spirit/sms/token HTTP/1.1" 301 0
+WARNING 2018-07-14 21:37:18,483 basehttp 124 "GET /accounts/spirit/sms/token/ HTTP/1.1" 400 9830
+WARNING 2018-07-14 21:37:24,144 basehttp 124 "GET /accounts/spirit/sms/token/ HTTP/1.1" 400 82
+ERROR 2018-07-14 21:49:52,977 views 24 --->图片验证码:[VPWY]<---
+ERROR 2018-07-14 21:49:52,977 views 25 --->UUID:[dbef32e3-03e8-4269-88c7-17ff163b8bcf]<---
+INFO 2018-07-14 21:49:52,992 basehttp 124 "GET /image_code/dbef32e3-03e8-4269-88c7-17ff163b8bcf/ HTTP/1.1" 200 3295
+WARNING 2018-07-14 21:50:27,130 basehttp 124 "GET /accounts/spirit/sms/token/ HTTP/1.1" 400 82
+ERROR 2018-07-14 21:50:40,792 serializers 19 {'request': <rest_framework.request.Request object at 0x7f4f7266a4e0>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7f4f7266ac50>}
+INFO 2018-07-14 21:50:40,799 basehttp 124 "GET /accounts/spirit/sms/token/?image_code_id=dbef32e3-03e8-4269-88c7-17ff163b8bcf&text=VPWY HTTP/1.1" 200 185

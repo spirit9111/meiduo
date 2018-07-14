@@ -17,14 +17,11 @@ class CheckImageCodeSerializer(serializers.Serializer):
 		image_code_id = attrs['image_code_id']
 		text = attrs['text']
 		logger.error(self.context)
-		# {'request':obj,'format':'bbb','view':'obj'}
-		mobile = self.context['view'].kwargs['mobile']
 
 		# 取出真实的图片验证码
 		redis_conn = get_redis_connection('verify_codes')
 		real_text = redis_conn.get('img_%s' % image_code_id)
 
-		# 图片验证码只能使用一次
 		try:
 			redis_conn.delete('img_%s' % image_code_id)
 		except Exception as e:
@@ -37,7 +34,14 @@ class CheckImageCodeSerializer(serializers.Serializer):
 		if text.lower() != real_text.decode().lower():
 			raise serializers.ValidationError('图片验证码输入错误')
 
-		if redis_conn.get("send_flag_%s" % mobile) == 1:
-			raise serializers.ValidationError('一分钟一次')
+		# {'request':obj,'format':'bbb','view':'obj'}
+		# mobile = self.context['view'].kwargs['mobile']
+
+		# 想要在找回密码时复用代码,而此时没有mobile,所以需要判断
+		mobile = self.context['view'].kwargs.get('mobile', None)
+		if mobile:
+			# 图片验证码只能使用一次
+			if redis_conn.get("send_flag_%s" % mobile) == 1:
+				raise serializers.ValidationError('一分钟一次')
 
 		return attrs
