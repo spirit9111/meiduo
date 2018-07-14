@@ -1262,3 +1262,45 @@ INFO 2018-07-13 18:07:53,177 basehttp 124 "OPTIONS /register/ HTTP/1.1" 200 0
 INFO 2018-07-13 18:07:53,196 basehttp 124 "GET /mobiles/15071176826/count/ HTTP/1.1" 200 34
 INFO 2018-07-13 18:07:53,197 basehttp 124 "GET /username/spirit/count/ HTTP/1.1" 200 31
 INFO 2018-07-13 18:07:53,272 basehttp 124 "POST /register/ HTTP/1.1" 201 51
+ERROR 2018-07-14 20:06:35,461 views 24 --->图片验证码:[IOTX]<---
+ERROR 2018-07-14 20:06:35,462 views 25 --->UUID:[fd8cbfc9-9049-45e9-b7f7-c6ddc913f092]<---
+INFO 2018-07-14 20:06:35,477 basehttp 124 "GET /image_code/fd8cbfc9-9049-45e9-b7f7-c6ddc913f092/ HTTP/1.1" 200 3178
+ERROR 2018-07-14 20:06:39,540 views 24 --->图片验证码:[TNQC]<---
+ERROR 2018-07-14 20:06:39,540 views 25 --->UUID:[7b8800a3-42cc-4686-a341-73629bc10302]<---
+INFO 2018-07-14 20:06:39,542 basehttp 124 "GET /image_code/7b8800a3-42cc-4686-a341-73629bc10302/ HTTP/1.1" 200 3050
+ERROR 2018-07-14 20:06:40,753 views 24 --->图片验证码:[LQYS]<---
+ERROR 2018-07-14 20:06:40,753 views 25 --->UUID:[94a04962-b663-4086-8075-fd1c69723e50]<---
+INFO 2018-07-14 20:06:40,754 basehttp 124 "GET /image_code/94a04962-b663-4086-8075-fd1c69723e50/ HTTP/1.1" 200 3438
+INFO 2018-07-14 20:06:43,677 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:06:50,614 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-14 20:06:59,219 serializers 19 {'request': <rest_framework.request.Request object at 0x7ff6fc526358>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7ff6fc5261d0>}
+ERROR 2018-07-14 20:06:59,221 views 44 --->短信验证码:[400167]<---
+INFO 2018-07-14 20:06:59,237 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:06:59,335 basehttp 124 "GET /sms_code/13111111111/?text=LQYS&image_code_id=94a04962-b663-4086-8075-fd1c69723e50 HTTP/1.1" 200 16
+INFO 2018-07-14 20:07:12,704 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:07:12,708 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:07:12,829 basehttp 124 "POST /register/ HTTP/1.1" 201 56
+ERROR 2018-07-14 20:10:38,346 views 24 --->图片验证码:[ZIU4]<---
+ERROR 2018-07-14 20:10:38,346 views 25 --->UUID:[dfcdec95-c81c-44b1-b5ce-456c93bad03c]<---
+INFO 2018-07-14 20:10:38,355 basehttp 124 "GET /image_code/dfcdec95-c81c-44b1-b5ce-456c93bad03c/ HTTP/1.1" 200 3277
+INFO 2018-07-14 20:10:45,532 basehttp 124 "GET /username/13122222222/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:10:55,835 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-14 20:11:04,952 serializers 19 {'request': <rest_framework.request.Request object at 0x7f589eba6550>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7f589eba63c8>}
+ERROR 2018-07-14 20:11:04,954 views 44 --->短信验证码:[057699]<---
+INFO 2018-07-14 20:11:05,009 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:11:05,021 basehttp 124 "GET /sms_code/13211111111/?text=ZIU4&image_code_id=dfcdec95-c81c-44b1-b5ce-456c93bad03c HTTP/1.1" 200 16
+INFO 2018-07-14 20:11:19,145 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:11:19,146 basehttp 124 "GET /username/13122222222/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:11:19,202 basehttp 124 "POST /register/ HTTP/1.1" 201 236
+ERROR 2018-07-14 20:13:30,420 views 24 --->图片验证码:[VGUY]<---
+ERROR 2018-07-14 20:13:30,420 views 25 --->UUID:[855b664d-5307-4d94-b602-13452e20d580]<---
+INFO 2018-07-14 20:13:30,425 basehttp 124 "GET /image_code/855b664d-5307-4d94-b602-13452e20d580/ HTTP/1.1" 200 3375
+INFO 2018-07-14 20:13:36,014 basehttp 124 "GET /username/13133333333/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:13:44,467 basehttp 124 "GET /mobiles/13133333333/count/ HTTP/1.1" 200 34
+ERROR 2018-07-14 20:13:48,901 serializers 19 {'request': <rest_framework.request.Request object at 0x7f374c78f5c0>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7f374c78f400>}
+ERROR 2018-07-14 20:13:48,902 views 44 --->短信验证码:[708322]<---
+INFO 2018-07-14 20:13:48,959 basehttp 124 "GET /mobiles/13133333333/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:13:48,974 basehttp 124 "GET /sms_code/13133333333/?text=vguy&image_code_id=855b664d-5307-4d94-b602-13452e20d580 HTTP/1.1" 200 16
+INFO 2018-07-14 20:14:04,533 basehttp 124 "GET /mobiles/13133333333/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:14:04,545 basehttp 124 "GET /username/13133333333/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:14:04,596 basehttp 124 "POST /register/ HTTP/1.1" 201 236

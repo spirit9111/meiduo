@@ -130,6 +130,12 @@ var vm = new Vue({
 					responseType: 'json'
 				})
 						.then(response => {
+							sessionStorage.clear();
+							localStorage.clear();
+							localStorage.token = response.data.token;
+							localStorage.username = response.data.username;
+							localStorage.user_id = response.data.user_id;
+
 							location.href = '/index.html';
 						})
 						.catch(error => {
