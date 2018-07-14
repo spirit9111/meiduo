@@ -3,8 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from itsdangerous import TimedJSONWebSignatureSerializer
 
-
 # Create your models here.
+from meiduo_mall.utils.exceptions import logger
 
 
 class User(AbstractUser):
@@ -27,3 +27,15 @@ class User(AbstractUser):
 		data = {'mobile': self.mobile}
 		token = serializer.dumps(data).decode()
 		return token
+
+	@staticmethod
+	def check_access_token_send_sms(token):
+		"""校验access_token获取真实的当前用户mobile"""
+		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
+		try:
+			data = serializer.loads(token)
+		except Exception as e:
+			logger.error('解析mobile异常%s' % e)
+			return None
+		else:
+			return data.get('mobile')

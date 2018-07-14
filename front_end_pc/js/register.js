@@ -190,7 +190,7 @@ var vm = new Vue({
 						}, 1000, 60)
 					})
 					.catch(error => {
-						alert('error')
+						// alert('error')
 						if (error.response.status == 400) {
 							this.error_image_code_message = '图片验证码有误';
 							this.error_image_code = true;
