@@ -1478,3 +1478,129 @@ INFO 2018-07-14 23:26:56,161 basehttp 124 "GET /image_code/b79aa9e2-1ab3-4c5b-b7
 ERROR 2018-07-14 23:27:02,938 serializers 19 {'request': <rest_framework.request.Request object at 0x7f26842e4fd0>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7f26842e4e80>}
 INFO 2018-07-14 23:27:02,943 basehttp 124 "GET /accounts/spirit/sms/token/?text=kxch&image_code_id=b79aa9e2-1ab3-4c5b-b772-ca2bc9c0252e HTTP/1.1" 200 185
 ERROR 2018-07-14 23:28:09,621 views 110 --->短信验证码:[042534]<---
+ERROR 2018-07-15 00:02:54,685 views 24 --->图片验证码:[5TG4]<---
+ERROR 2018-07-15 00:02:54,685 views 25 --->UUID:[ba44979e-404f-4e98-aa46-10d21e1a61a1]<---
+INFO 2018-07-15 00:02:54,693 basehttp 124 "GET /image_code/ba44979e-404f-4e98-aa46-10d21e1a61a1/ HTTP/1.1" 200 2974
+ERROR 2018-07-15 00:03:05,258 serializers 19 {'request': <rest_framework.request.Request object at 0x7fd569741cf8>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7fd569741ba8>}
+WARNING 2018-07-15 00:03:05,260 basehttp 124 "GET /accounts/spirit/sms/token/?text=5tca&image_code_id=ba44979e-404f-4e98-aa46-10d21e1a61a1 HTTP/1.1" 400 52
+ERROR 2018-07-15 00:03:07,028 views 24 --->图片验证码:[TZ8F]<---
+ERROR 2018-07-15 00:03:07,028 views 25 --->UUID:[a518b32f-7343-4150-a0f6-41f19f5bd46b]<---
+INFO 2018-07-15 00:03:07,029 basehttp 124 "GET /image_code/a518b32f-7343-4150-a0f6-41f19f5bd46b/ HTTP/1.1" 200 3192
+ERROR 2018-07-15 00:03:14,428 serializers 19 {'request': <rest_framework.request.Request object at 0x7fd5694decc0>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7fd5694deba8>}
+INFO 2018-07-15 00:03:14,431 basehttp 124 "GET /accounts/spirit/sms/token/?text=tz8f&image_code_id=a518b32f-7343-4150-a0f6-41f19f5bd46b HTTP/1.1" 200 185
+ERROR 2018-07-15 00:03:15,845 views 109 --->短信验证码:[912906]<---
+INFO 2018-07-15 00:03:15,851 basehttp 124 "GET /sms_codes/?access_token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMTU4NDE5NCwiZXhwIjoxNTMxNTg0NDk0fQ.eyJtb2JpbGUiOiIxNTA3MTE3NjgyNiJ9.oKscgQ9sMesbkUssmNsV2L_ceZ4_UZ9kGWZHzq836No HTTP/1.1" 200 16
+WARNING 2018-07-15 00:03:31,319 base 152 Not Found: /accounts/spirit/password/token/
+WARNING 2018-07-15 00:03:31,321 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=912906 HTTP/1.1" 404 3607
+WARNING 2018-07-15 00:03:46,190 base 152 Not Found: /accounts/spirit/password/token/
+WARNING 2018-07-15 00:03:46,191 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=912906 HTTP/1.1" 404 3607
+ERROR 2018-07-15 00:05:05,973 views 24 --->图片验证码:[BUQP]<---
+ERROR 2018-07-15 00:05:05,982 views 25 --->UUID:[109f85d9-2b33-4ca9-95da-92412e9697fd]<---
+INFO 2018-07-15 00:05:06,003 basehttp 124 "GET /image_code/109f85d9-2b33-4ca9-95da-92412e9697fd/ HTTP/1.1" 200 3159
+ERROR 2018-07-15 00:05:16,029 serializers 19 {'request': <rest_framework.request.Request object at 0x7fe9b2bd6da0>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7fe9b2bd6c50>}
+INFO 2018-07-15 00:05:16,035 basehttp 124 "GET /accounts/spirit/sms/token/?text=buqp&image_code_id=109f85d9-2b33-4ca9-95da-92412e9697fd HTTP/1.1" 200 185
+ERROR 2018-07-15 00:05:17,658 views 109 --->短信验证码:[948399]<---
+INFO 2018-07-15 00:05:17,669 basehttp 124 "GET /sms_codes/?access_token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMTU4NDMxNiwiZXhwIjoxNTMxNTg0NjE2fQ.eyJtb2JpbGUiOiIxNTA3MTE3NjgyNiJ9.YxkWACj6lfj4PHE1Q3gJJsgBzQc3aAOdiUJlwtq5kzU HTTP/1.1" 200 16
+WARNING 2018-07-15 00:05:26,820 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 400 52
+WARNING 2018-07-15 00:05:46,742 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 400 9944
+WARNING 2018-07-15 00:06:24,398 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 400 9944
+ERROR 2018-07-15 00:06:35,808 exception 135 Internal Server Error: /accounts/spirit/password/token/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 134, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/serializers.py", line 104, in validate
+    redis_conn = get_redis_connection('verify_codes').decode()
+AttributeError: 'StrictRedis' object has no attribute 'decode'
+ERROR 2018-07-15 00:06:36,120 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 500 112482
+ERROR 2018-07-15 00:06:38,987 exception 135 Internal Server Error: /accounts/spirit/password/token/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 134, in get
+    serializer.is_valid(raise_exception=True)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/serializers.py", line 104, in validate
+    redis_conn = get_redis_connection('verify_codes').decode()
+AttributeError: 'StrictRedis' object has no attribute 'decode'
+ERROR 2018-07-15 00:06:39,104 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 500 112482
+ERROR 2018-07-15 00:07:13,580 exception 135 Internal Server Error: /accounts/spirit/password/token/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/django_py3_1.11/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 136, in get
+    user = serializer.user
+AttributeError: 'CheckSmsCodeSerializer' object has no attribute 'user'
+ERROR 2018-07-15 00:07:14,814 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=948399 HTTP/1.1" 500 98625
+ERROR 2018-07-15 00:12:22,367 views 24 --->图片验证码:[M4YD]<---
+ERROR 2018-07-15 00:12:22,369 views 25 --->UUID:[a5afeef1-daf4-44da-9cbc-aff44d71eb64]<---
+INFO 2018-07-15 00:12:22,386 basehttp 124 "GET /image_code/a5afeef1-daf4-44da-9cbc-aff44d71eb64/ HTTP/1.1" 200 3390
+ERROR 2018-07-15 00:12:41,517 views 24 --->图片验证码:[NVHT]<---
+ERROR 2018-07-15 00:12:41,563 views 25 --->UUID:[a5afeef1-daf4-44da-9cbc-aff44d71eb64]<---
+INFO 2018-07-15 00:12:42,285 basehttp 124 "GET /image_code/a5afeef1-daf4-44da-9cbc-aff44d71eb64/ HTTP/1.1" 200 3299
+ERROR 2018-07-15 00:12:55,022 views 24 --->图片验证码:[V9OW]<---
+ERROR 2018-07-15 00:12:55,037 views 25 --->UUID:[1bd8a77e-d10a-4678-8850-f3a53f619242]<---
+INFO 2018-07-15 00:12:55,720 basehttp 124 "GET /image_code/1bd8a77e-d10a-4678-8850-f3a53f619242/ HTTP/1.1" 200 3128
+WARNING 2018-07-15 00:16:13,966 base 152 Not Found: /
+WARNING 2018-07-15 00:16:13,968 basehttp 124 "GET / HTTP/1.1" 404 3680
+ERROR 2018-07-15 00:16:23,004 views 24 --->图片验证码:[JH9D]<---
+ERROR 2018-07-15 00:16:23,004 views 25 --->UUID:[4a79d99e-0ccf-45c0-8af6-2be2717bb72a]<---
+INFO 2018-07-15 00:16:23,021 basehttp 124 "GET /image_code/4a79d99e-0ccf-45c0-8af6-2be2717bb72a/ HTTP/1.1" 200 2882
+ERROR 2018-07-15 00:16:30,276 views 24 --->图片验证码:[E3YT]<---
+ERROR 2018-07-15 00:16:30,276 views 25 --->UUID:[16ee92c4-f24d-4c25-a0a4-c3913835a6dd]<---
+INFO 2018-07-15 00:16:30,278 basehttp 124 "GET /image_code/16ee92c4-f24d-4c25-a0a4-c3913835a6dd/ HTTP/1.1" 200 2804
+ERROR 2018-07-15 00:16:37,116 serializers 19 {'request': <rest_framework.request.Request object at 0x7fef0e54ccc0>, 'format': None, 'view': <user.views.FindPasswordStepOneView object at 0x7fef0e54c710>}
+INFO 2018-07-15 00:16:37,118 basehttp 124 "GET /accounts/spirit/sms/token/?text=e3yt&image_code_id=16ee92c4-f24d-4c25-a0a4-c3913835a6dd HTTP/1.1" 200 185
+ERROR 2018-07-15 00:16:38,941 views 109 --->短信验证码:[874864]<---
+INFO 2018-07-15 00:16:38,943 basehttp 124 "GET /sms_codes/?access_token=eyJhbGciOiJIUzI1NiIsImlhdCI6MTUzMTU4NDk5NywiZXhwIjoxNTMxNTg1Mjk3fQ.eyJtb2JpbGUiOiIxNTA3MTE3NjgyNiJ9.-TLmVOwcud5-E8zn3OudEMgepfRsmaskJ-5tzFeNFuE HTTP/1.1" 200 16
+INFO 2018-07-15 00:16:48,571 basehttp 124 "GET /accounts/spirit/password/token/?sms_code=874864 HTTP/1.1" 200 160

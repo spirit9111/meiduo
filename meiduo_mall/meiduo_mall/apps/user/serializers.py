@@ -15,9 +15,10 @@ class RegisterSerializer(serializers.ModelSerializer):
 	allow = serializers.CharField(label='同意协议', write_only=True)
 	# 新增需要的token
 	token = serializers.CharField(label='登录状态token', read_only=True)
+
 	class Meta:
 		model = User
-		fields = ('id', 'username', 'password', 'password2', 'sms_code', 'mobile', 'allow','token')
+		fields = ('id', 'username', 'password', 'password2', 'sms_code', 'mobile', 'allow', 'token')
 		extra_kwargs = {
 			'username': {
 				'min_length': 5,
@@ -87,3 +88,25 @@ class RegisterSerializer(serializers.ModelSerializer):
 		token = jwt_encode_handler(payload)
 		user.token = token
 		return user
+
+
+class CheckSmsCodeSerializer(serializers.Serializer):
+	"""校验短信验证码"""
+	sms_code = serializers.CharField(min_length=6, max_length=6)
+
+	def validate(self, attrs):
+		account = self.context['view'].kwargs['account']
+		user = User.objects.get(username=account)
+		if not user:
+			raise serializers.ValidationError('用户不存在')
+		self.user = user
+		sms_code = attrs.get('sms_code')
+
+		redis_conn = get_redis_connection('verify_codes')
+		mobile = user.mobile
+		real_sms_code = redis_conn.get('sms_%s' % mobile).decode()
+		if not real_sms_code:
+			raise serializers.ValidationError('短信验证码过期或失效')
+		if sms_code != real_sms_code:
+			raise serializers.ValidationError('短信验证码输入错误')
+		return attrs

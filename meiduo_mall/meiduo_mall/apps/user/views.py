@@ -4,11 +4,10 @@ import re
 from django_redis import get_redis_connection
 from rest_framework import status
 from rest_framework.generics import GenericAPIView, CreateAPIView
-from rest_framework.mixins import CreateModelMixin
 from rest_framework.response import Response
 
 from meiduo_mall.utils.exceptions import logger
-from serializers import RegisterSerializer
+from user.serializers import RegisterSerializer, CheckSmsCodeSerializer
 from user.models import User
 
 # GET usernames/(?P<username>/count/
@@ -103,7 +102,7 @@ class FindPasswordStepTwoView(GenericAPIView):
 		# 60s发送一次
 		redis_conn = get_redis_connection('verify_codes')
 		send_flag = redis_conn.get("send_flag_%s" % mobile)
-		if send_flag==1:
+		if send_flag == 1:
 			return Response({"message": "请求次数过于频繁"}, 429)
 
 		sms_code = '%06d' % random.randint(0, 999999)
@@ -118,7 +117,23 @@ class FindPasswordStepTwoView(GenericAPIView):
 		# try:
 		# 	send_mes = SendMes()
 		# 	send_mes.send_2_mes(mobile, sms_code)
-		# except Exceptione:
+		# except Exception as e:
 		# 	logger.error(e)
 		# 异步发短信
 		return Response({'message': 'ok'})
+
+
+# GET accounts/(?P<account>\w{5,20})/password/token/
+
+class FindPasswordStepThreeView(GenericAPIView):
+	"""找回密码第三步,校验短信验证码+设置token给下一步使用"""
+	serializer_class = CheckSmsCodeSerializer
+
+	def get(self, request, account):
+		serializer = self.get_serializer(data=request.query_params)
+		serializer.is_valid(raise_exception=True)
+
+		user = serializer.user
+
+		access_token = user.generate_password_token()
+		return Response({'user_id': user.id, 'access_token': access_token})

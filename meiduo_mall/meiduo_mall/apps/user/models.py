@@ -28,6 +28,14 @@ class User(AbstractUser):
 		token = serializer.dumps(data).decode()
 		return token
 
+	def generate_password_token(self):
+		"""使用user.id生成token"""
+		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
+		# data = token中的载荷
+		data = {'user_id': self.id}
+		token = serializer.dumps(data).decode()
+		return token
+
 	@staticmethod
 	def check_access_token_send_sms(token):
 		"""校验access_token获取真实的当前用户mobile"""
@@ -39,3 +47,18 @@ class User(AbstractUser):
 			return None
 		else:
 			return data.get('mobile')
+
+	@staticmethod
+	def check_access_token_reset_password(user_id, token):
+		"""校验access_token获取真实的当前用户mobile"""
+		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
+		try:
+			data = serializer.loads(token)
+		except Exception as e:
+			logger.error('解析user_id异常%s' % e)
+			return False
+		else:
+			if user_id != str(data.get('user_id')):
+				return False
+			else:
+				return True
