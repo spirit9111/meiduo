@@ -217,6 +217,7 @@ REST_FRAMEWORK = {
 # JWT超时时间
 JWT_AUTH = {
 	'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+	'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
 }
 
 # 模型相关配置

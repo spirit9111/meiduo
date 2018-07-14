@@ -1304,3 +1304,18 @@ INFO 2018-07-14 20:13:48,974 basehttp 124 "GET /sms_code/13133333333/?text=vguy&
 INFO 2018-07-14 20:14:04,533 basehttp 124 "GET /mobiles/13133333333/count/ HTTP/1.1" 200 34
 INFO 2018-07-14 20:14:04,545 basehttp 124 "GET /username/13133333333/count/ HTTP/1.1" 200 36
 INFO 2018-07-14 20:14:04,596 basehttp 124 "POST /register/ HTTP/1.1" 201 236
+INFO 2018-07-14 20:16:18,835 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 175
+ERROR 2018-07-14 20:17:47,150 views 24 --->图片验证码:[GCB9]<---
+ERROR 2018-07-14 20:17:47,151 views 25 --->UUID:[2b889f37-58cc-4d11-8b7a-7e9873489abd]<---
+INFO 2018-07-14 20:17:47,160 basehttp 124 "GET /image_code/2b889f37-58cc-4d11-8b7a-7e9873489abd/ HTTP/1.1" 200 3272
+INFO 2018-07-14 20:17:53,049 basehttp 124 "GET /username/13100000000/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:18:08,719 basehttp 124 "GET /mobiles/13100000000/count/ HTTP/1.1" 200 34
+ERROR 2018-07-14 20:18:23,068 serializers 19 {'request': <rest_framework.request.Request object at 0x7fbbea116860>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7fbbea1166a0>}
+ERROR 2018-07-14 20:18:23,070 views 44 --->短信验证码:[896688]<---
+INFO 2018-07-14 20:18:23,131 basehttp 124 "GET /mobiles/13100000000/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:18:23,148 basehttp 124 "GET /sms_code/13100000000/?text=GCB9&image_code_id=2b889f37-58cc-4d11-8b7a-7e9873489abd HTTP/1.1" 200 16
+INFO 2018-07-14 20:18:35,750 basehttp 124 "OPTIONS /register/ HTTP/1.1" 200 0
+INFO 2018-07-14 20:18:35,768 basehttp 124 "GET /username/13100000000/count/ HTTP/1.1" 200 36
+INFO 2018-07-14 20:18:35,771 basehttp 124 "GET /mobiles/13100000000/count/ HTTP/1.1" 200 34
+INFO 2018-07-14 20:18:35,817 basehttp 124 "POST /register/ HTTP/1.1" 201 236
+INFO 2018-07-14 20:19:04,341 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 207
