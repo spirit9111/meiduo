@@ -1,8 +1,7 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        // host: host,
-
+        host: host,
         image_code_id: '',
         image_code_url: '',
 
@@ -67,7 +66,7 @@ var vm = new Vue({
             this.image_code_id = this.generate_uuid();
 
             // 设置页面中图片验证码img标签的src属性
-            this.image_code_url = "http://127.0.0.1:8000/image_code/" + this.image_code_id + "/";
+            this.image_code_url = this.host+"/image_code/" + this.image_code_id + "/";
         },
         // 检查数据
         check_username: function(){
@@ -101,7 +100,7 @@ var vm = new Vue({
             this.check_image_code();
 
             if (this.error_username == false && this.error_image_code == false) {
-                axios.get('http://127.0.0.1:8000/accounts/' + this.username + '/sms/token/?text='+ this.image_code + '&image_code_id=' + this.image_code_id, {
+                axios.get(this.host+'/accounts/' + this.username + '/sms/token/?text='+ this.image_code + '&image_code_id=' + this.image_code_id, {
                         responseType: 'json'
                     })
                     .then(response => {
@@ -133,7 +132,7 @@ var vm = new Vue({
                 return;
             }
             this.sending_flag = true;
-            axios.get('http://127.0.0.1:8000/sms_codes/?access_token='+ this.access_token, {
+            axios.get(this.host+'/sms_codes/?access_token='+ this.access_token, {
                     responseType: 'json'
                 })
                 .then(response => {
@@ -165,7 +164,7 @@ var vm = new Vue({
         form_2_on_submit: function(){
             this.check_sms_code();
             if (this.error_sms_code == false) {
-                axios.get('http://127.0.0.1:8000/accounts/' + this.username + '/password/token/?sms_code=' + this.sms_code, {
+                axios.get(this.host+'/accounts/' + this.username + '/password/token/?sms_code=' + this.sms_code, {
                         responseType: 'json'
                     })
                     .then(response => {
@@ -211,7 +210,7 @@ var vm = new Vue({
             this.check_pwd();
             this.check_cpwd();
             if (this.error_password == false && this.error_check_password == false) {
-                axios.post('http://127.0.0.1:8000/users/'+ this.user_id +'/password/', {
+                axios.post(this.host+'/users/'+ this.user_id +'/password/', {
                         password: this.password,
                         password2: this.password2,
                         access_token: this.access_token

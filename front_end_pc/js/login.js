@@ -1,7 +1,7 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        // host: host,
+        host: host,
         error_username: false,
         error_pwd: false,
         error_pwd_message: '请填写密码',
@@ -41,7 +41,7 @@ var vm = new Vue({
             this.check_pwd();
 
             if (this.error_username == false && this.error_pwd == false) {
-                axios.post('http://127.0.0.1:8000/authorizations/', {
+                axios.post(this.host+'/authorizations/', {
                         username: this.username,
                         password: this.password
                     }, {
