@@ -1,20 +1,18 @@
 import random
 import re
-
 from django_redis import get_redis_connection
 from rest_framework import status
-from rest_framework.generics import GenericAPIView, CreateAPIView
+from rest_framework.generics import GenericAPIView, CreateAPIView, UpdateAPIView
 from rest_framework.response import Response
-
+from rest_framework.mixins import UpdateModelMixin
 from meiduo_mall.utils.exceptions import logger
-from user.serializers import RegisterSerializer, CheckSmsCodeSerializer
+from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer
 from user.models import User
-
-# GET usernames/(?P<username>/count/
 from verifications.constants import SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from verifications.serializers import CheckImageCodeSerializer
 
 
+# GET usernames/(?P<username>/count/
 class UsernameView(GenericAPIView):
 	"""用户名验证接口"""
 
@@ -137,3 +135,17 @@ class FindPasswordStepThreeView(GenericAPIView):
 
 		access_token = user.generate_password_token()
 		return Response({'user_id': user.id, 'access_token': access_token})
+
+
+# POST users / (?P < pk > \d+) / password /
+class FindPasswordStepFourView(UpdateModelMixin, GenericAPIView):
+	"""找回密码第四步,校验身份+重制密码"""
+	serializer_class = CheckUserIdSerializer
+	queryset = User.objects.all()
+
+	def post(self, request, pk):
+		return self.update(request, pk)
+
+# class FindPasswordStepFourView(UpdateAPIView):
+# 	serializer_class = CheckUserIdSerializer
+# 	queryset = User.objects.all()

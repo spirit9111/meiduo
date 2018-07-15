@@ -110,3 +110,49 @@ class CheckSmsCodeSerializer(serializers.Serializer):
 		if sms_code != real_sms_code:
 			raise serializers.ValidationError('短信验证码输入错误')
 		return attrs
+
+
+# 	todo 校验user_id
+class CheckUserIdSerializer(serializers.ModelSerializer):
+	"""校验use_id和重置密码"""
+	password2 = serializers.CharField(label='密码', write_only=True)
+	access_token = serializers.CharField(label='token', write_only=True)
+
+	class Meta:
+		model = User
+		fields = ['id', 'password', 'password2', 'access_token', ]
+		extra_kwargs = {
+			'password': {
+				'write_only': True,
+				'min_length': 8,
+				'max_length': 20,
+				'error_messages': {
+					'min_length': '仅允许8-20个字符的密码',
+					'max_length': '仅允许8-20个字符的密码',
+				}
+			}
+		}
+
+	def validate(self, attrs):
+		"""验证用户信息"""
+		# 调用模型中的方法,校验身份
+		user_id_by_url = self.context['view'].kwargs['pk']
+		access_token = attrs['access_token']
+		allow = User.check_access_token_reset_password(user_id_by_url, access_token)
+		if not allow:
+			raise serializers.ValidationError('token失效或过期')
+
+		password = attrs['password']
+		password2 = attrs['password2']
+		if password2 != password:
+			raise serializers.ValidationError('两次密码不一致')
+		return attrs
+
+	# 更新数据中的密码
+	def update(self, instance, validated_data):
+		password = validated_data['password']
+		pk = self.context['view'].kwargs['pk']
+		user = User.objects.get(pk=pk)
+		user.set_password(password)
+		user.save()
+		return user

@@ -2,7 +2,7 @@ from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
 
 from user.views import UsernameView, MobileView, RegisterView, FindPasswordStepOneView, FindPasswordStepTwoView, \
-	FindPasswordStepThreeView
+	FindPasswordStepThreeView, FindPasswordStepFourView
 
 urlpatterns = [
 	# 注册
@@ -16,4 +16,5 @@ urlpatterns = [
 	url(r'accounts/(?P<account>\w{5,20})/sms/token/', FindPasswordStepOneView.as_view()),
 	url(r'sms_codes/', FindPasswordStepTwoView.as_view()),
 	url(r'accounts/(?P<account>\w{5,20})/password/token/', FindPasswordStepThreeView.as_view()),
+	url(r'users/(?P<pk>\d+)/password/', FindPasswordStepFourView.as_view()),
 ]
