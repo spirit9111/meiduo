@@ -47,7 +47,7 @@ class OAuthQQ(object):
 			response_data = response.read().decode()
 			# 讲查询字符串转换为python中的字典
 			data = parse.parse_qs(response_data)
-			access_token = data.get('access_token', None)
+			access_token = data.get('access_token', None)[0]
 		except Exception as e:
 			logger.error(e)
 			raise Exception('获取access_token异常')
@@ -55,8 +55,9 @@ class OAuthQQ(object):
 
 	def get_qq_openid(self, access_token):
 		"""获取openid"""
-		url = 'https://graph.qq.com/oauth2.0/me?'
+		url = 'https://graph.qq.com/oauth2.0/me?access_token='
 		url += access_token
+		logger.error(url)
 		try:
 			response = request.urlopen(url)
 			response_data = response.read().decode()
@@ -69,7 +70,7 @@ class OAuthQQ(object):
 		return openid
 
 	@staticmethod
-	def generate_save_user_token(self, openid):
+	def generate_save_user_token(openid):
 		"""根据openid生成注册/绑定时用于验证身份的token"""
 		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
 		data = {'openid': openid}

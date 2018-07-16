@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
-
+from meiduo_mall.utils.exceptions import logger
 from oauth.models import OAuthQQUser
 from oauth.utils import OAuthQQ
 
@@ -48,12 +48,15 @@ class QQAuthUserView(APIView):
 		openid = oauthqq.get_qq_openid(access_token)
 
 		# 获取openid后需要判断
-		oauthqquser = OAuthQQUser.objects.get(openid=openid)
+		# oauthqquser = OAuthQQUser.get
 
-		# 1.第一次用qq登录
-		if not oauthqquser:
-			# 使用openid生成记录qq身份的token,以便注册或绑定时使用
-			access_token = oauthqquser.generate_save_user_token(openid)
+		try:
+			oauthqquser = OAuthQQUser.objects.get(openid=openid)
+		except Exception as e:
+			logger.error('此人未绑定或未注册:%s' % e)
+			# 1.第一次用qq登录
+			# 使用openid生成记录qq身份的token,以便注册或绑定时验证身份
+			access_token = OAuthQQ.generate_save_user_token(openid)
 			return Response({'access_token': access_token})
 		# 1.1 已经注册本站账号--->跳转绑定界面
 		# 1.2 未注册本站账号--->注册并绑定
