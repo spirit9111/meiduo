@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
 from meiduo_mall.utils.exceptions import logger
 from oauth.models import OAuthQQUser
+from oauth.serializers import OAuthQQUserSerializer
 from oauth.utils import OAuthQQ
 
 
@@ -31,15 +33,17 @@ class QQAuthUrlView(APIView):
 # qq登录后会返回设定注册qq登录功能时指定的重定向界面
 # 该界面的js中将获取qq的code,进入接口
 # GET /oauth/qq/user/?code = xxx
-class QQAuthUserView(APIView):
+class QQAuthUserView(GenericAPIView):
 	"""QQ登录后,拿着code获取access_token值"""
+	# todo
+	serializer_class = OAuthQQUserSerializer
 
 	def get(self, request):
+		"""QQ登录"""
 		code = request.query_params.get('code')
 		if not code:
 			return Response({'message': 'code不存在'}, 400)
 
-		# todo
 		# 目标是通过 code获取access_token
 		oauthqq = OAuthQQ()
 		access_token = oauthqq.get_qq_access_token(code)
@@ -72,7 +76,26 @@ class QQAuthUserView(APIView):
 
 			data = {
 				'user_id': user.id,
-				'username': user.user,
+				'username': user.username,
 				'token': jwt_token
 			}
 			return Response(data=data)
+
+	def post(self, request):
+		"""QQ绑定网站账号/注册新账号"""
+
+		serializer = self.get_serializer(data=request.data)
+		serializer.is_valid(raise_exception=True)
+		user = serializer.save()
+
+		jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+		jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+		payload = jwt_payload_handler(user)
+		jwt_token = jwt_encode_handler(payload)
+
+		data = {
+			'user_id': user.id,
+			'username': user.mobile,
+			'token': jwt_token
+		}
+		return Response(data=data)

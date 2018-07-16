@@ -76,3 +76,15 @@ class OAuthQQ(object):
 		data = {'openid': openid}
 		token = serializer.dumps(data).decode()
 		return token
+
+	@staticmethod
+	def check_token_by_openid(token):
+		"""校验openid生成access_token"""
+		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
+		try:
+			data = serializer.loads(token)
+		except Exception as e:
+			logger.error(e)
+			return None
+		else:
+			return data.get('openid')
