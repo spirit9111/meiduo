@@ -1,6 +1,9 @@
-from urllib.parse import urlencode
-
+import json
+from urllib import request, parse
 from django.conf import settings
+from itsdangerous import TimedJSONWebSignatureSerializer
+
+from meiduo_mall.utils.exceptions import logger
 
 
 class OAuthQQ(object):
@@ -23,5 +26,52 @@ class OAuthQQ(object):
 		}
 		url = 'https://graph.qq.com/oauth2.0/authorize?'
 		# 拼接查询字符串,
-		url += urlencode(params)
+		url += parse.urlencode(params)
 		return url
+
+	def get_qq_access_token(self, code):
+		"""获取access_token"""
+		params = {
+			'grant_type': 'authorization_code',
+			'client_id': self.client_id,
+			'client_secret': self.client_secret,
+			'code': code,
+			'redirect_uri': self.redirect_uri,
+		}
+		url = 'https://graph.qq.com/oauth2.0/token?'
+		url += parse.urlencode(params)
+		# 向qq方发起http请求,获取包含access_token的查询字符串
+		# 形式access_token=FE04************************CCE2&expires_in=7776000&refresh_token=88E4************************BE14
+		try:
+			response = request.urlopen(url)
+			response_data = response.read().decode()
+			# 讲查询字符串转换为python中的字典
+			data = parse.parse_qs(response_data)
+			access_token = data.get('access_token', None)
+		except Exception as e:
+			logger.error(e)
+			raise Exception('获取access_token异常')
+		return access_token
+
+	def get_qq_openid(self, access_token):
+		"""获取openid"""
+		url = 'https://graph.qq.com/oauth2.0/me?'
+		url += access_token
+		try:
+			response = request.urlopen(url)
+			response_data = response.read().decode()
+			# 返回一个字符串  callback( {"client_id":"YOUR_APPID","openid":"YOUR_OPENID"} )\n;
+			data_dict = json.loads(response_data[10:-4])
+			openid = data_dict.get('openid', None)
+		except Exception as e:
+			logger.error(e)
+			raise Exception('获取openid异常')
+		return openid
+
+	@staticmethod
+	def generate_save_user_token(self, openid):
+		"""根据openid生成注册/绑定时用于验证身份的token"""
+		serializer = TimedJSONWebSignatureSerializer(settings.SECRET_KEY, 300)
+		data = {'openid': openid}
+		token = serializer.dumps(data).decode()
+		return token
