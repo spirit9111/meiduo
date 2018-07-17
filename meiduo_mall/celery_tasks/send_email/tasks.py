@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.core.mail import send_mail
-
 from celery_tasks.main import celery_app
 
 
@@ -14,5 +13,4 @@ def send_to_email(to_email, verify_url):
 	# django自带的send_mail
 	send_mail(subject, "", settings.EMAIL_FROM, [to_email], html_message=html_message)
 
-
-# send_to_email('1020186996@163.com', '111111')
+# send_to_email.delay('1020186996@163.com', '111111')

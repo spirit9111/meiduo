@@ -248,4 +248,4 @@ EMAIL_HOST_USER = '15071176826@163.com'
 # 在邮箱中设置的客户端授权密码
 EMAIL_HOST_PASSWORD = 'wzx921214'
 # 收件人看到的发件人
-EMAIL_FROM = '发件人昵称<15071176826@163.com>'
+EMAIL_FROM = 'spirit<15071176826@163.com>'
