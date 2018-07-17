@@ -81,7 +81,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 		user.set_password(validated_data['password'])
 		user.save()
 
-		# 补充生成记录登录状态的jwt_token
+		# 补充生成记录登录状态的
 		jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
 		jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 		payload = jwt_payload_handler(user)
@@ -112,7 +112,6 @@ class CheckSmsCodeSerializer(serializers.Serializer):
 		return attrs
 
 
-# 	todo 校验user_id
 class CheckUserIdSerializer(serializers.ModelSerializer):
 	"""校验use_id和重置密码"""
 	password2 = serializers.CharField(label='密码', write_only=True)
@@ -156,3 +155,11 @@ class CheckUserIdSerializer(serializers.ModelSerializer):
 		user.set_password(password)
 		user.save()
 		return user
+
+
+class UserInfoSerializer(serializers.ModelDurationField):
+	"""用户信息序列化器 """
+
+	class Meta:
+		models = User
+		fields = ['id', 'username', 'mobile', 'email', 'email_active', ]

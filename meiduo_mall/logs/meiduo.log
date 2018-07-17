@@ -2033,3 +2033,546 @@ WARNING 2018-07-16 11:45:36,294 base 152 Not Found: /oauth/qq/user/
 WARNING 2018-07-16 11:45:36,296 basehttp 124 "GET /oauth/qq/user/?code=33D6AA2162F9D1AF7F2071225D6E3FEB HTTP/1.1" 404 4137
 WARNING 2018-07-16 11:45:54,369 base 152 Not Found: /oauth/qq/user/
 WARNING 2018-07-16 11:45:54,369 basehttp 124 "GET /oauth/qq/user/?code=33D6AA2162F9D1AF7F2071225D6E3FEB HTTP/1.1" 404 4137
+INFO 2018-07-16 16:28:29,260 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+WARNING 2018-07-16 16:29:01,534 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-07-16 16:29:01,535 basehttp 124 "GET /oauth/qq/user/?code=5100CBA559AB2E97AB51AA85B1406554 HTTP/1.1" 404 4137
+WARNING 2018-07-16 16:31:09,906 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-07-16 16:31:09,908 basehttp 124 "GET /oauth/qq/user/?code=5100CBA559AB2E97AB51AA85B1406554 HTTP/1.1" 404 4301
+WARNING 2018-07-16 16:31:13,187 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-07-16 16:31:13,188 basehttp 124 "GET /oauth/qq/user/?code=5100CBA559AB2E97AB51AA85B1406554 HTTP/1.1" 404 4301
+INFO 2018-07-16 16:31:21,224 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+WARNING 2018-07-16 16:32:06,313 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-07-16 16:32:06,315 basehttp 124 "GET /oauth/qq/user/?code=F43CB735B01BC1E95480036E5BC1EFC0 HTTP/1.1" 404 4301
+WARNING 2018-07-16 16:32:21,139 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-07-16 16:32:21,141 basehttp 124 "GET /oauth/qq/user/?code=F43CB735B01BC1E95480036E5BC1EFC0 HTTP/1.1" 404 4301
+WARNING 2018-07-16 16:32:21,217 base 152 Not Found: /favicon.ico
+WARNING 2018-07-16 16:32:21,218 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4025
+ERROR 2018-07-16 16:33:23,445 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 48, in get
+    openid = oauthqq.get_qq_openid(access_token)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 59, in get_qq_openid
+    url += access_token
+TypeError: must be str, not list
+ERROR 2018-07-16 16:33:23,538 basehttp 124 "GET /oauth/qq/user/?code=F43CB735B01BC1E95480036E5BC1EFC0 HTTP/1.1" 500 101461
+INFO 2018-07-16 16:34:23,112 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+INFO 2018-07-16 16:34:50,475 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 16:35:46,222 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 48, in get
+    openid = oauthqq.get_qq_openid(access_token)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 59, in get_qq_openid
+    url += access_token
+TypeError: must be str, not list
+ERROR 2018-07-16 16:35:47,266 basehttp 124 "GET /oauth/qq/user/?code=5FBAE5A61D5C68872C5B610B1AD2E0D9 HTTP/1.1" 500 20400
+INFO 2018-07-16 16:37:09,438 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 16:38:50,358 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 48, in get
+    openid = oauthqq.get_qq_openid(access_token)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 59, in get_qq_openid
+    url += access_token
+TypeError: must be str, not list
+ERROR 2018-07-16 16:38:50,505 basehttp 124 "GET /oauth/qq/user/?code=FEF7749F7BC0042FE8C1305F8AA4DBA7 HTTP/1.1" 500 20400
+INFO 2018-07-16 16:40:09,691 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 16:43:30,242 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 16:44:08,872 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    oauthqquser = OAuthQQUser.objects.get(openid=openid)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+ERROR 2018-07-16 16:44:09,019 basehttp 124 "GET /oauth/qq/user/?code=596EFAB991455B3C4A95029128C39F6C HTTP/1.1" 500 20691
+ERROR 2018-07-16 16:45:40,420 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 16:45:40,422 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 46, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 16:45:40,787 basehttp 124 "GET /oauth/qq/user/?code=596EFAB991455B3C4A95029128C39F6C HTTP/1.1" 500 110426
+ERROR 2018-07-16 16:47:08,262 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+INFO 2018-07-16 17:39:54,861 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 17:40:21,321 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 17:41:51,386 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 17:43:54,195 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 17:44:57,345 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 52, in get
+    oauthqquser = OAuthQQUser.objects.get(openid=openid)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+ERROR 2018-07-16 17:44:57,475 basehttp 124 "GET /oauth/qq/user/?code=D5AD61D9E4B60F10046DA6A8937595C0 HTTP/1.1" 500 20690
+ERROR 2018-07-16 17:55:03,616 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 17:55:19,157 views 56 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+ERROR 2018-07-16 17:55:31,218 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 54, in get
+    oauthqquser = OAuthQQUser.objects.get(openid=openid)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+oauth.models.DoesNotExist: OAuthQQUser matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 62, in get
+    access_token = OAuthQQUser.generate_save_user_token(openid)
+AttributeError: type object 'OAuthQQUser' has no attribute 'generate_save_user_token'
+ERROR 2018-07-16 17:55:31,347 basehttp 124 "GET /oauth/qq/user/?code=47BCC2F7A8E28530BDFDF0095452BB08 HTTP/1.1" 500 21040
+ERROR 2018-07-16 17:58:52,447 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 17:58:56,373 views 56 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+INFO 2018-07-16 17:59:03,570 basehttp 124 "GET /oauth/qq/user/?code=875E7DB537484447A77565ECDBBB591F HTTP/1.1" 200 190
+WARNING 2018-07-16 17:59:03,700 base 152 Not Found: /image_codes/5174913c-a242-401a-8f0c-3f0383fa8546/
+WARNING 2018-07-16 17:59:03,710 basehttp 124 "GET /image_codes/5174913c-a242-401a-8f0c-3f0383fa8546/ HTTP/1.1" 404 4139
+WARNING 2018-07-16 17:59:10,165 base 152 Not Found: /image_codes/3b7af6fa-9ada-4e5f-87b3-2eaedaca1004/
+WARNING 2018-07-16 17:59:10,165 basehttp 124 "GET /image_codes/3b7af6fa-9ada-4e5f-87b3-2eaedaca1004/ HTTP/1.1" 404 4139
+INFO 2018-07-16 19:16:13,430 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 19:16:27,131 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 19:16:27,377 views 60 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+INFO 2018-07-16 19:16:27,378 basehttp 124 "GET /oauth/qq/user/?code=F6E073C49D34BE5269302C385AC18553 HTTP/1.1" 200 190
+WARNING 2018-07-16 19:16:27,394 base 152 Not Found: /image_codes/86947bbd-da36-40ad-a574-718a3f4ac82c/
+WARNING 2018-07-16 19:16:27,397 basehttp 124 "GET /image_codes/86947bbd-da36-40ad-a574-718a3f4ac82c/ HTTP/1.1" 404 4139
+WARNING 2018-07-16 19:17:03,794 base 152 Not Found: /image_codes/244b9d6a-2535-42ce-85e4-8c331297d254/
+WARNING 2018-07-16 19:17:03,794 basehttp 124 "GET /image_codes/244b9d6a-2535-42ce-85e4-8c331297d254/ HTTP/1.1" 404 4139
+ERROR 2018-07-16 19:17:22,020 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 19:17:22,021 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 19:17:22,091 basehttp 124 "GET /oauth/qq/user/?code=F6E073C49D34BE5269302C385AC18553 HTTP/1.1" 500 19214
+ERROR 2018-07-16 19:17:22,443 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 19:17:22,443 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 19:17:22,462 basehttp 124 "GET /oauth/qq/user/?code=F6E073C49D34BE5269302C385AC18553 HTTP/1.1" 500 19214
+ERROR 2018-07-16 19:17:24,690 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 19:17:24,691 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 19:17:24,728 basehttp 124 "GET /oauth/qq/user/?code=F6E073C49D34BE5269302C385AC18553 HTTP/1.1" 500 19214
+ERROR 2018-07-16 19:17:36,151 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 19:17:36,412 views 60 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+INFO 2018-07-16 19:17:36,413 basehttp 124 "GET /oauth/qq/user/?code=9B38A2604CAFFA69E8C109528D43DCFB HTTP/1.1" 200 190
+ERROR 2018-07-16 19:17:36,442 views 24 --->图片验证码:[LQZS]<---
+ERROR 2018-07-16 19:17:36,442 views 25 --->UUID:[ea88328e-a8ce-4f30-b25f-d59efb373cdf]<---
+ERROR 2018-07-16 19:17:36,444 exceptions 26 [<verifications.views.ImageCodeView object at 0x7fa2e40cfbe0>] Error 111 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2018-07-16 19:17:36,444 basehttp 124 "GET /image_code/ea88328e-a8ce-4f30-b25f-d59efb373cdf/ HTTP/1.1" 507 35
+ERROR 2018-07-16 19:17:39,576 views 24 --->图片验证码:[7UVI]<---
+ERROR 2018-07-16 19:17:39,576 views 25 --->UUID:[598b893d-6d7a-43f7-aac0-4c7f29e48ee7]<---
+ERROR 2018-07-16 19:17:39,577 exceptions 26 [<verifications.views.ImageCodeView object at 0x7fa2e4091518>] Error 111 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2018-07-16 19:17:39,578 basehttp 124 "GET /image_code/598b893d-6d7a-43f7-aac0-4c7f29e48ee7/ HTTP/1.1" 507 35
+ERROR 2018-07-16 19:18:57,669 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 19:18:57,669 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 19:18:57,688 basehttp 124 "GET /oauth/qq/user/?code=9B38A2604CAFFA69E8C109528D43DCFB HTTP/1.1" 500 19214
+ERROR 2018-07-16 19:19:12,646 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 19:19:12,886 views 60 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+INFO 2018-07-16 19:19:12,887 basehttp 124 "GET /oauth/qq/user/?code=DC8B1394F5B9CEF5502C3F7509F4B389 HTTP/1.1" 200 190
+ERROR 2018-07-16 19:19:12,908 views 24 --->图片验证码:[VN6F]<---
+ERROR 2018-07-16 19:19:12,908 views 25 --->UUID:[1e091746-83b1-43b7-90bf-ecb054e754f3]<---
+INFO 2018-07-16 19:19:12,911 basehttp 124 "GET /image_code/1e091746-83b1-43b7-90bf-ecb054e754f3/ HTTP/1.1" 200 3000
+ERROR 2018-07-16 19:19:14,222 views 24 --->图片验证码:[UAEZ]<---
+ERROR 2018-07-16 19:19:14,223 views 25 --->UUID:[d15d646c-2537-40ce-a42b-867e0ba82d0f]<---
+INFO 2018-07-16 19:19:14,225 basehttp 124 "GET /image_code/d15d646c-2537-40ce-a42b-867e0ba82d0f/ HTTP/1.1" 200 3439
+ERROR 2018-07-16 19:19:49,066 serializers 19 {'request': <rest_framework.request.Request object at 0x7fa2e40886d8>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7fa2e4088940>}
+ERROR 2018-07-16 19:19:49,068 views 44 --->短信验证码:[116302]<---
+INFO 2018-07-16 19:19:49,165 basehttp 124 "GET /sms_code/15011111111/?text=uaez&image_code_id=d15d646c-2537-40ce-a42b-867e0ba82d0f HTTP/1.1" 200 16
+INFO 2018-07-16 19:20:00,253 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-07-16 19:20:00,330 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 98, in post
+    'username': user.user,
+AttributeError: 'User' object has no attribute 'user'
+ERROR 2018-07-16 19:20:00,351 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 500 18698
+ERROR 2018-07-16 19:22:12,056 utils 52 'NoneType' object is not subscriptable
+ERROR 2018-07-16 19:22:12,057 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 50, in get_qq_access_token
+    access_token = data.get('access_token', None)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    access_token = oauthqq.get_qq_access_token(code)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/oauth/utils.py", line 53, in get_qq_access_token
+    raise Exception('获取access_token异常')
+Exception: 获取access_token异常
+ERROR 2018-07-16 19:22:12,104 basehttp 124 "GET /oauth/qq/user/?code=DC8B1394F5B9CEF5502C3F7509F4B389 HTTP/1.1" 500 19214
+ERROR 2018-07-16 19:22:27,551 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+INFO 2018-07-16 19:22:27,807 basehttp 124 "GET /oauth/qq/user/?code=CD7EF9BBC9D4C6D8DF960EC61B1B4C4F HTTP/1.1" 200 207
+INFO 2018-07-16 19:23:59,537 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+ERROR 2018-07-16 19:24:07,482 utils 60 https://graph.qq.com/oauth2.0/me?access_token=AE28B10F12B0E8B4557B14DAD13637D0
+ERROR 2018-07-16 19:24:07,729 views 60 此人未绑定或未注册:OAuthQQUser matching query does not exist.
+INFO 2018-07-16 19:24:07,730 basehttp 124 "GET /oauth/qq/user/?code=0A0E03D969A14E5BEA4C60D2F78DCE52 HTTP/1.1" 200 190
+ERROR 2018-07-16 19:24:07,749 views 24 --->图片验证码:[ZFQE]<---
+ERROR 2018-07-16 19:24:07,749 views 25 --->UUID:[e5910ff4-a1b7-4e14-9f79-c33ce60adc32]<---
+INFO 2018-07-16 19:24:07,752 basehttp 124 "GET /image_code/e5910ff4-a1b7-4e14-9f79-c33ce60adc32/ HTTP/1.1" 200 3345
+ERROR 2018-07-16 19:24:17,079 serializers 19 {'request': <rest_framework.request.Request object at 0x7fc879b59f60>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7fc8794e8ac8>}
+ERROR 2018-07-16 19:24:17,080 views 44 --->短信验证码:[268833]<---
+INFO 2018-07-16 19:24:17,181 basehttp 124 "GET /sms_code/15011111111/?text=ZFQE&image_code_id=e5910ff4-a1b7-4e14-9f79-c33ce60adc32 HTTP/1.1" 200 16
+ERROR 2018-07-16 19:24:26,138 serializers 38 本站用户不存在,等待注册---User matching query does not exist.
+INFO 2018-07-16 19:24:26,197 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 218
+WARNING 2018-07-17 19:47:22,779 base 152 Not Found: /
+WARNING 2018-07-17 19:47:22,781 basehttp 124 "GET / HTTP/1.1" 404 3974
+WARNING 2018-07-17 19:47:22,853 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 19:47:22,854 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4025
+WARNING 2018-07-17 19:47:28,093 base 152 Not Found: /user/
+WARNING 2018-07-17 19:47:28,093 basehttp 124 "GET /user/ HTTP/1.1" 404 4007
+WARNING 2018-07-17 19:48:57,864 base 152 Not Found: /user/
+WARNING 2018-07-17 19:48:57,865 basehttp 124 "GET /user/ HTTP/1.1" 404 4007
+WARNING 2018-07-17 19:48:59,241 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 19:48:59,277 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,277 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,278 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,281 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,282 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,283 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,284 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,305 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,307 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,308 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2018-07-17 19:48:59,353 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2018-07-17 19:49:25,980 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-07-17 19:49:25,986 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:49:29,115 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:49:36,452 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:49:39,964 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:04,681 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:08,205 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:12,275 basehttp 124 "POST /authorizations/ HTTP/1.1" 401 43
+ERROR 2018-07-17 19:50:17,692 views 24 --->图片验证码:[FVQQ]<---
+ERROR 2018-07-17 19:50:17,693 views 25 --->UUID:[97b4a553-cc7a-4d3c-9365-f162d429d8fe]<---
+INFO 2018-07-17 19:50:17,710 basehttp 124 "GET /image_code/97b4a553-cc7a-4d3c-9365-f162d429d8fe/ HTTP/1.1" 200 3619
+WARNING 2018-07-17 19:50:21,569 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:29,679 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+ERROR 2018-07-17 19:50:32,749 serializers 19 {'request': <rest_framework.request.Request object at 0x7fddd77765c0>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7fddd576bd68>}
+WARNING 2018-07-17 19:50:32,751 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+ERROR 2018-07-17 19:50:32,752 views 44 --->短信验证码:[324529]<---
+INFO 2018-07-17 19:50:32,798 basehttp 124 "GET /sms_code/13111111111/?text=fvqq&image_code_id=97b4a553-cc7a-4d3c-9365-f162d429d8fe HTTP/1.1" 200 16
+WARNING 2018-07-17 19:50:43,033 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:43,035 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+INFO 2018-07-17 19:50:46,194 basehttp 124 "OPTIONS /register/ HTTP/1.1" 200 0
+WARNING 2018-07-17 19:50:46,202 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:46,207 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:50:46,208 basehttp 124 "POST /register/ HTTP/1.1" 401 43
+ERROR 2018-07-17 19:51:07,899 views 24 --->图片验证码:[LPNI]<---
+ERROR 2018-07-17 19:51:07,899 views 25 --->UUID:[b71a168f-984d-4bbb-bb0d-1231a1f90279]<---
+INFO 2018-07-17 19:51:07,901 basehttp 124 "GET /image_code/b71a168f-984d-4bbb-bb0d-1231a1f90279/ HTTP/1.1" 200 3129
+WARNING 2018-07-17 19:51:12,381 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:51:12,384 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:51:12,385 basehttp 124 "POST /register/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:51:36,679 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:51:47,023 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 401 43
+WARNING 2018-07-17 19:51:48,346 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 401 43
+INFO 2018-07-17 19:52:28,605 basehttp 124 "GET /username/13111111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-17 19:52:28,606 basehttp 124 "GET /mobiles/13111111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-17 19:52:28,632 basehttp 124 "POST /register/ HTTP/1.1" 201 236
+WARNING 2018-07-17 19:52:33,113 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:33,115 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:34,961 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:34,962 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:35,586 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:35,587 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:36,023 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:36,024 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:36,299 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:36,300 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:36,501 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:36,504 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:36,699 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:36,700 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:36,951 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:36,955 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:37,136 base 152 Not Found: /user/
+WARNING 2018-07-17 19:52:37,136 basehttp 124 "GET /user/ HTTP/1.1" 404 4160
+WARNING 2018-07-17 19:52:40,410 basehttp 124 "GET /user/user HTTP/1.1" 401 4967
+WARNING 2018-07-17 19:54:03,040 base 152 Not Found: /user/user
+WARNING 2018-07-17 19:54:03,041 basehttp 124 "GET /user/user HTTP/1.1" 404 4173
+WARNING 2018-07-17 19:54:03,981 base 152 Not Found: /user/user
+WARNING 2018-07-17 19:54:03,983 basehttp 124 "GET /user/user HTTP/1.1" 404 4173
+WARNING 2018-07-17 19:54:04,509 base 152 Not Found: /user/user
+WARNING 2018-07-17 19:54:04,510 basehttp 124 "GET /user/user HTTP/1.1" 404 4173
+WARNING 2018-07-17 19:54:04,869 base 152 Not Found: /user/user
+WARNING 2018-07-17 19:54:04,870 basehttp 124 "GET /user/user HTTP/1.1" 404 4173
+WARNING 2018-07-17 19:54:06,407 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 19:54:07,573 basehttp 124 "GET /user HTTP/1.1" 401 4942
+INFO 2018-07-17 19:54:36,497 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 218
+WARNING 2018-07-17 19:54:39,371 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 19:54:40,534 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 19:54:42,070 basehttp 124 "GET /user HTTP/1.1" 401 4942
+INFO 2018-07-17 19:55:22,523 basehttp 124 "GET /authorizations HTTP/1.1" 301 0
+WARNING 2018-07-17 19:55:22,567 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+INFO 2018-07-17 19:55:31,064 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
+WARNING 2018-07-17 19:55:39,756 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 19:55:48,855 basehttp 124 "GET /user HTTP/1.1" 401 4942

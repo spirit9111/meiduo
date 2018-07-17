@@ -7,9 +7,10 @@ from meiduo_mall.utils.exceptions import logger
 
 
 class OAuthQQ(object):
-	"""用于qq登录的工具类,生成相应的url等"""
+	"""用于qq登录的工具类"""
 
 	def __init__(self, client_id=None, client_secret=None, redirect_uri=None, state=None):
+		"""QQ登录开发文档中需要的参数"""
 		self.client_id = client_id or settings.QQ_CLIENT_ID
 		self.client_secret = client_secret or settings.QQ_CLIENT_SECRET
 		self.redirect_uri = redirect_uri or settings.QQ_REDIRECT_URI

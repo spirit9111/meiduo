@@ -35,7 +35,6 @@ class QQAuthUrlView(APIView):
 # GET /oauth/qq/user/?code = xxx
 class QQAuthUserView(GenericAPIView):
 	"""QQ登录后,拿着code获取access_token值"""
-	# todo
 	serializer_class = OAuthQQUserSerializer
 
 	def get(self, request):

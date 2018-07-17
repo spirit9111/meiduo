@@ -2,17 +2,18 @@ import random
 import re
 from django_redis import get_redis_connection
 from rest_framework import status
-from rest_framework.generics import GenericAPIView, CreateAPIView, UpdateAPIView
+from rest_framework.generics import GenericAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.mixins import UpdateModelMixin
 from meiduo_mall.utils.exceptions import logger
-from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer
+from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer, UserInfoSerializer
 from user.models import User
 from verifications.constants import SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from verifications.serializers import CheckImageCodeSerializer
 
 
-# GET usernames/(?P<username>/count/
+# GET usernames/(?P<username>/count/_
 class UsernameView(GenericAPIView):
 	"""用户名验证接口"""
 
@@ -146,6 +147,23 @@ class FindPasswordStepFourView(UpdateModelMixin, GenericAPIView):
 	def post(self, request, pk):
 		return self.update(request, pk)
 
+
 # class FindPasswordStepFourView(UpdateAPIView):
 # 	serializer_class = CheckUserIdSerializer
 # 	queryset = User.objects.all()
+
+# GET user/
+# jwt保存在请求头中
+class UserInfoView(RetrieveAPIView):
+	"""用户信息"""
+	serializer_class = UserInfoSerializer
+	# 指定视图的访问权限,不期望通过user/pk方式进行访问
+	permission_classes = [IsAuthenticated, ]
+
+	def get_object(self):
+		"""
+		在默认的RetrieveAPIView的get_object需要url中传入pk指明具体查询的用户
+		request.user 保存了通过验证的user对象
+		:return: 通过权限验证的用户对象
+		"""
+		return self.request.user
