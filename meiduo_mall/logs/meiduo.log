@@ -2576,3 +2576,956 @@ WARNING 2018-07-17 19:55:22,567 basehttp 124 "GET /authorizations/ HTTP/1.1" 405
 INFO 2018-07-17 19:55:31,064 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
 WARNING 2018-07-17 19:55:39,756 basehttp 124 "GET /user HTTP/1.1" 401 4942
 WARNING 2018-07-17 19:55:48,855 basehttp 124 "GET /user HTTP/1.1" 401 4942
+INFO 2018-07-17 19:59:51,556 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-07-17 19:59:51,628 base 152 Not Found: /user/
+WARNING 2018-07-17 19:59:51,630 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 19:59:52,378 base 152 Not Found: /user/
+WARNING 2018-07-17 19:59:52,379 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 19:59:53,785 base 152 Not Found: /user/
+WARNING 2018-07-17 19:59:53,786 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 20:00:03,729 base 152 Not Found: /user/
+WARNING 2018-07-17 20:00:03,731 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 20:00:08,297 base 152 Not Found: /user/
+WARNING 2018-07-17 20:00:08,299 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 20:00:34,181 base 152 Not Found: /user/
+WARNING 2018-07-17 20:00:34,186 basehttp 124 "GET /user/ HTTP/1.1" 404 4161
+WARNING 2018-07-17 20:00:46,091 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 20:00:47,874 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 20:00:48,542 basehttp 124 "GET /user HTTP/1.1" 401 4942
+WARNING 2018-07-17 20:01:10,543 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:01:11,346 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+ERROR 2018-07-17 20:01:13,086 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:01:13,232 basehttp 124 "GET /user/ HTTP/1.1" 500 19206
+ERROR 2018-07-17 20:01:15,952 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:01:16,016 basehttp 124 "GET /user/ HTTP/1.1" 500 19206
+WARNING 2018-07-17 20:01:24,890 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:01:35,216 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 20:01:35,258 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-07-17 20:01:35,270 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-07-17 20:01:35,272 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-07-17 20:01:35,277 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-07-17 20:01:35,281 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-07-17 20:01:35,284 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-07-17 20:01:35,286 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-07-17 20:01:35,286 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-07-17 20:01:35,287 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-07-17 20:01:35,287 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-07-17 20:01:35,330 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-07-17 20:01:35,383 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 20:01:35,383 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4179
+WARNING 2018-07-17 20:02:22,507 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:02:23,435 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:02:24,118 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:02:24,338 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:02:24,499 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:02:32,478 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+ERROR 2018-07-17 20:02:33,922 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:02:34,012 basehttp 124 "GET /user/ HTTP/1.1" 500 106355
+ERROR 2018-07-17 20:02:34,801 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:02:34,915 basehttp 124 "GET /user/ HTTP/1.1" 500 106355
+ERROR 2018-07-17 20:02:35,839 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:02:35,919 basehttp 124 "GET /user/ HTTP/1.1" 500 106355
+ERROR 2018-07-17 20:02:36,616 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:02:36,687 basehttp 124 "GET /user/ HTTP/1.1" 500 106355
+INFO 2018-07-17 20:02:47,470 basehttp 124 "GET /user HTTP/1.1" 301 0
+ERROR 2018-07-17 20:02:47,473 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:02:47,538 basehttp 124 "GET /user/ HTTP/1.1" 500 106355
+WARNING 2018-07-17 20:02:59,206 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:49,008 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:49,812 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:49,965 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:50,162 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:50,370 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:50,559 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:03:54,515 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 20:04:03,353 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
+WARNING 2018-07-17 20:04:05,618 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+INFO 2018-07-17 20:04:12,927 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
+WARNING 2018-07-17 20:04:22,869 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:06:02,385 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 20:06:08,866 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
+INFO 2018-07-17 20:06:15,249 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7789
+WARNING 2018-07-17 20:06:44,071 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:09:32,296 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1739
+WARNING 2018-07-17 20:09:36,491 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:09:36,788 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1739
+INFO 2018-07-17 20:10:19,833 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:10:33,693 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:10:34,946 basehttp 124 "GET /user/ HTTP/1.1" 500 20723
+INFO 2018-07-17 20:11:13,407 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-17 20:11:13,483 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 218
+WARNING 2018-07-17 20:17:43,585 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+INFO 2018-07-17 20:17:50,216 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7782
+WARNING 2018-07-17 20:17:58,279 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:18:04,602 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1739
+INFO 2018-07-17 20:19:13,576 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 211
+ERROR 2018-07-17 20:19:13,764 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:19:13,862 basehttp 124 "GET /user/ HTTP/1.1" 500 19198
+INFO 2018-07-17 20:22:37,249 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:22:37,354 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:22:37,533 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+ERROR 2018-07-17 20:22:40,026 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:22:40,148 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+WARNING 2018-07-17 20:23:17,790 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:23:20,291 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+ERROR 2018-07-17 20:25:21,845 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:25:22,115 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+WARNING 2018-07-17 20:26:30,200 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:26:35,654 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:26:36,491 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:26:37,746 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:27:08,077 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:27:08,903 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:27:11,612 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+ERROR 2018-07-17 20:29:46,065 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:29:46,209 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+ERROR 2018-07-17 20:31:54,832 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:31:54,963 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+WARNING 2018-07-17 20:32:11,418 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 20:33:56,927 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:34:00,111 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:34:00,246 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+ERROR 2018-07-17 20:34:25,223 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:34:25,232 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:34:25,432 basehttp 124 "GET /user/ HTTP/1.1" 500 20773
+ERROR 2018-07-17 20:34:25,434 basehttp 124 "GET /user/ HTTP/1.1" 500 20774
+WARNING 2018-07-17 20:34:40,400 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+ERROR 2018-07-17 20:37:08,588 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:37:08,660 basehttp 124 "GET /user/ HTTP/1.1" 500 20716
+WARNING 2018-07-17 20:37:34,463 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+INFO 2018-07-17 20:40:34,749 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:40:40,969 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:40:41,099 basehttp 124 "GET /user/ HTTP/1.1" 500 20717
+WARNING 2018-07-17 20:40:41,204 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:40:41,254 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:40:41,406 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 20:40:41,407 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4179
+WARNING 2018-07-17 20:40:41,446 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 20:40:41,447 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4179
+INFO 2018-07-17 20:43:25,886 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-17 20:43:25,957 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 211
+INFO 2018-07-17 20:43:26,038 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:43:26,081 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:43:26,176 basehttp 124 "GET /user/ HTTP/1.1" 500 19187
+ERROR 2018-07-17 20:43:28,467 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:43:28,505 basehttp 124 "GET /user/ HTTP/1.1" 500 19187
+WARNING 2018-07-17 20:43:45,898 basehttp 124 "GET /user/ HTTP/1.1" 401 4947
+WARNING 2018-07-17 20:43:46,191 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 20:43:46,192 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4179
+ERROR 2018-07-17 20:43:58,007 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:43:58,053 basehttp 124 "GET /user/ HTTP/1.1" 500 19187
+ERROR 2018-07-17 20:47:01,106 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:47:01,250 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+ERROR 2018-07-17 20:49:08,643 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:49:08,713 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+ERROR 2018-07-17 20:49:21,677 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:49:21,747 basehttp 124 "GET /user/ HTTP/1.1" 500 20762
+ERROR 2018-07-17 20:52:21,647 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:52:21,644 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:52:21,820 basehttp 124 "GET /user/ HTTP/1.1" 500 20706
+ERROR 2018-07-17 20:52:21,838 basehttp 124 "GET /user/ HTTP/1.1" 500 20762
+INFO 2018-07-17 20:53:09,067 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 211
+INFO 2018-07-17 20:53:27,569 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-07-17 20:53:41,441 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:53:41,567 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+ERROR 2018-07-17 20:58:17,575 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 20:58:18,283 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+ERROR 2018-07-17 21:01:02,774 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 21:01:02,863 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+ERROR 2018-07-17 21:02:08,365 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 57, in retrieve
+    serializer = self.get_serializer(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+ERROR 2018-07-17 21:02:08,446 basehttp 124 "GET /user/ HTTP/1.1" 500 20705
+INFO 2018-07-17 21:05:01,489 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-17 21:05:01,574 basehttp 124 "GET /user/ HTTP/1.1" 200 85
+INFO 2018-07-17 22:01:35,814 basehttp 124 "GET /emails HTTP/1.1" 301 0
+WARNING 2018-07-17 22:01:35,843 basehttp 124 "GET /emails/ HTTP/1.1" 401 3706
+INFO 2018-07-17 22:01:35,890 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-07-17 22:01:35,898 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-07-17 22:01:35,900 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-07-17 22:01:35,902 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-07-17 22:01:35,902 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-07-17 22:01:35,906 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-07-17 22:01:35,908 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-07-17 22:01:35,910 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-07-17 22:01:35,910 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-07-17 22:01:35,912 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-07-17 22:01:35,919 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-07-17 22:01:39,597 basehttp 124 "GET /emails/ HTTP/1.1" 401 3706
+INFO 2018-07-17 22:01:39,626 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-07-17 22:01:39,627 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-07-17 22:01:39,629 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-07-17 22:01:39,630 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-07-17 22:01:39,634 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-07-17 22:01:39,636 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-07-17 22:01:39,640 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-07-17 22:01:39,641 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-07-17 22:01:39,645 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-07-17 22:01:39,645 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-07-17 22:01:39,688 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-07-17 22:01:39,762 base 152 Not Found: /favicon.ico
+WARNING 2018-07-17 22:01:39,763 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4336
+INFO 2018-07-17 22:02:07,312 basehttp 124 "GET /authorizations HTTP/1.1" 301 0
+WARNING 2018-07-17 22:02:07,353 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 7589
+WARNING 2018-07-17 22:02:12,979 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7638
+WARNING 2018-07-17 22:02:21,639 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 7638
+INFO 2018-07-17 22:02:33,199 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 7782
+WARNING 2018-07-17 22:02:41,071 basehttp 124 "GET /emails/ HTTP/1.1" 401 3706
+INFO 2018-07-17 22:03:19,905 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-17 22:03:20,000 basehttp 124 "GET /user/ HTTP/1.1" 200 85
+INFO 2018-07-17 22:03:20,920 basehttp 124 "GET /user/ HTTP/1.1" 200 85
+INFO 2018-07-17 22:03:32,197 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+WARNING 2018-07-17 22:03:32,209 base 152 Not Found: /email/
+WARNING 2018-07-17 22:03:32,209 basehttp 124 "PUT /email/ HTTP/1.1" 404 4321
+WARNING 2018-07-17 22:03:39,716 base 152 Not Found: /email/
+WARNING 2018-07-17 22:03:39,718 basehttp 124 "PUT /email/ HTTP/1.1" 404 4321
+INFO 2018-07-17 22:04:52,359 basehttp 124 "GET /user/ HTTP/1.1" 200 85
+INFO 2018-07-17 22:05:06,334 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+INFO 2018-07-17 22:05:06,462 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+INFO 2018-07-17 22:06:23,115 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-07-17 22:06:24,292 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-07-17 22:06:25,769 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37
+INFO 2018-07-17 22:08:02,448 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-07-17 22:08:03,478 basehttp 124 "PUT /emails/ HTTP/1.1" 200 37

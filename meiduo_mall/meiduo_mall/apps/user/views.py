@@ -7,7 +7,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.mixins import UpdateModelMixin
 from meiduo_mall.utils.exceptions import logger
-from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer, UserInfoSerializer
+from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer, UserInfoSerializer, \
+	EmailSerializer
 from user.models import User
 from verifications.constants import SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from verifications.serializers import CheckImageCodeSerializer
@@ -158,7 +159,7 @@ class UserInfoView(RetrieveAPIView):
 	"""用户信息"""
 	serializer_class = UserInfoSerializer
 	# 指定视图的访问权限,不期望通过user/pk方式进行访问
-	permission_classes = [IsAuthenticated, ]
+	permission_classes = [IsAuthenticated]
 
 	def get_object(self):
 		"""
@@ -166,4 +167,15 @@ class UserInfoView(RetrieveAPIView):
 		request.user 保存了通过验证的user对象
 		:return: 通过权限验证的用户对象
 		"""
+		return self.request.user
+
+
+# 更新emil
+# PUT email/
+class SendAndSaveEmail(UpdateAPIView):
+	"""发送+保存email"""
+	serializer_class = EmailSerializer
+	permission_classes = [IsAuthenticated]
+
+	def get_object(self):
 		return self.request.user

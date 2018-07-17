@@ -5,6 +5,7 @@ from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
 from user.models import User
+from celery_tasks.send_email.tasks import send_to_email
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -157,9 +158,32 @@ class CheckUserIdSerializer(serializers.ModelSerializer):
 		return user
 
 
-class UserInfoSerializer(serializers.ModelDurationField):
+class UserInfoSerializer(serializers.ModelSerializer):
 	"""用户信息序列化器 """
 
 	class Meta:
-		models = User
-		fields = ['id', 'username', 'mobile', 'email', 'email_active', ]
+		model = User
+		fields = ('id', 'username', 'mobile', 'email', 'email_active')
+
+
+class EmailSerializer(serializers.ModelSerializer):
+	"""邮箱序列化"""
+
+	class Meta:
+		model = User
+		fields = ['id', 'email']
+		extra_kwargs = {
+			'email': {
+				'required': True
+			}
+		}
+
+	def update(self, instance, validated_data):
+		instance.email = validated_data['email']
+		instance.save()
+		# 生成url
+		url = instance.generate_email_url()
+		# 异步发送email
+		send_to_email.delay(instance.email, url)
+
+		return instance
