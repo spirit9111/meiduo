@@ -250,3 +250,11 @@ EMAIL_HOST_USER = '15071176826@163.com'
 EMAIL_HOST_PASSWORD = 'wzx921214'
 # 收件人看到的发件人
 EMAIL_FROM = 'spirit<15071176826@163.com>'
+
+# 常用数据的缓存,drf扩展累
+REST_FRAMEWORK_EXTENSIONS = {
+	# 缓存时间
+	'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,
+	# 缓存存储
+	'DEFAULT_USE_CACHE': 'default',
+}

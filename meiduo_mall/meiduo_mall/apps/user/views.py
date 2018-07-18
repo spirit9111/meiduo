@@ -2,16 +2,19 @@ import random
 import re
 from django_redis import get_redis_connection
 from rest_framework import status
+from rest_framework.decorators import action
 from rest_framework.generics import GenericAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.mixins import UpdateModelMixin
+from rest_framework.mixins import UpdateModelMixin, CreateModelMixin
 from rest_framework.views import APIView
+from rest_framework.viewsets import GenericViewSet
 
 from meiduo_mall.utils.exceptions import logger
+from user import serializers
 from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer, UserInfoSerializer, \
-	EmailSerializer
-from user.models import User
+	EmailSerializer, AddressSerializer
+from user.models import User, Address
 from verifications.constants import SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from verifications.serializers import CheckImageCodeSerializer
 
@@ -202,3 +205,79 @@ class VerifyEmailView(APIView):
 			user.email_active = True
 			user.save()
 			return Response({'message': 'OK'})
+
+
+class CreateOrUpdateAddressInfo(CreateModelMixin, UpdateModelMixin, GenericViewSet):
+	"""地址管理接口,新增和修改地址"""
+	serializer_class = AddressSerializer
+	# queryset = Address.objects.all()
+
+	# def post(self, request):
+	# 	"""新增"""
+	# 	return self.create(request)
+	#
+	# def put(self, request):
+	# 	"""修改"""
+	# 	return self.update(request)
+	permissions = [IsAuthenticated]
+
+	def get_queryset(self):
+		return self.request.user.addresses.filter(is_deleted=False)
+
+	def list(self, request, *args, **kwargs):
+		"""
+		用户地址列表数据
+		"""
+		queryset = self.get_queryset()
+		serializer = self.get_serializer(queryset, many=True)
+		user = self.request.user
+		return Response({
+			'user_id': user.id,
+			'default_address_id': user.default_address_id,
+			'limit': 3,
+			'addresses': serializer.data,
+		})
+
+	def create(self, request, *args, **kwargs):
+		"""
+		保存用户地址数据
+		"""
+		# 检查用户地址数据数目不能超过上限
+		count = request.user.addresses.count()
+		if count >= 3:
+			return Response({'message': '保存地址数据已达到上限'}, status=status.HTTP_400_BAD_REQUEST)
+
+		return super().create(request, *args, **kwargs)
+
+	def destroy(self, request, *args, **kwargs):
+		"""
+		处理删除
+		"""
+		address = self.get_object()
+
+		# 进行逻辑删除
+		address.is_deleted = True
+		address.save()
+
+		return Response(status=status.HTTP_204_NO_CONTENT)
+
+	@action(methods=['put'], detail=True)
+	def status(self, request, pk=None, address_id=None):
+		"""
+		设置默认地址
+		"""
+		address = self.get_object()
+		request.user.default_address = address
+		request.user.save()
+		return Response({'message': 'OK'}, status=status.HTTP_200_OK)
+
+	@action(methods=['put'], detail=True)
+	def title(self, request, pk=None, address_id=None):
+		"""
+		修改标题
+		"""
+		address = self.get_object()
+		serializer = serializers.AddressTitleSerializer(instance=address, data=request.data)
+		serializer.is_valid(raise_exception=True)
+		serializer.save()
+		return Response(serializer.data)
