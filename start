@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# 开启reids
+sudo redis-server /etc/redis/redis.conf
+
+# 开启前端
+cd ./front_end_pc/
+live-server &
+
+# 开启celery
+cd ../meiduo_mall
+celery -A celery_tasks.main worker -l info
