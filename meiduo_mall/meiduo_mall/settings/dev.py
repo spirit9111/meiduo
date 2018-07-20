@@ -264,10 +264,11 @@ REST_FRAMEWORK_EXTENSIONS = {
 }
 
 # django文件存储
-DEFAULT_FILE_STORAGE = 'meiduo_mall.utils.fastdfs.fdfs_storage.FastDFSStorage'
+DEFAULT_FILE_STORAGE = 'meiduo_mall.utils.fastdfs.storage.FastDFSStorage'
 
 # FastDFS
-FDFS_URL = 'http://image.meiduo.site:8888/'
+# FDFS_URL = 'http://image.meiduo.site:8888/'
+FDFS_BASE_URL = 'http://image.meiduo.site:8888/'
 FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
 
 # 富文本编辑器ckeditor配置
@@ -279,3 +280,5 @@ CKEDITOR_CONFIGS = {
 	},
 }
 CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所以此处设为''
+
+GENERATED_STATIC_HTML_FILES_DIR = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), 'front_end_pc')
