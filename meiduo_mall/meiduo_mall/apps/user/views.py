@@ -243,7 +243,7 @@ class CreateOrUpdateAddressInfo(CreateModelMixin, UpdateModelMixin, GenericViewS
 		保存用户地址数据
 		"""
 		# 检查用户地址数据数目不能超过上限
-		count = request.user.addresses.count()
+		count = request.user.addresses.filter(is_deleted=0).count()
 		if count >= 3:
 			return Response({'message': '保存地址数据已达到上限'}, status=status.HTTP_400_BAD_REQUEST)
 
