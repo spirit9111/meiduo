@@ -7,6 +7,12 @@ sudo redis-server /etc/redis/redis.conf
 cd ./front_end_pc/
 live-server &
 
+# 重启docker
+docker container restart storage &
+docker container restart tracker &
+
 # 开启celery
 cd ../meiduo_mall
 celery -A celery_tasks.main worker -l info
+
+
