@@ -1,12 +1,12 @@
 import os
-
 from django.conf import settings
 from django.template import loader
-
+from celery_tasks.main import celery_app
 from goods.models import SKU
 from goods.utils import get_categories
 
 
+@celery_app.task(name='generate_static_sku_detail_html')
 def generate_static_sku_detail_html(sku_id):
 	"""生成商品详情页的静态页面"""
 	# 生成商品分类
