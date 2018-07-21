@@ -30,6 +30,7 @@ class GoodsChannel(BaseModel):
 	url = models.CharField(max_length=50, verbose_name='频道页面链接')
 	sequence = models.IntegerField(verbose_name='组内顺序')
 
+	objects = models.Manager()
 	class Meta:
 		db_table = 'tb_goods_channel'
 		verbose_name = '商品频道'
@@ -132,6 +133,8 @@ class SKU(BaseModel):
 	comments = models.IntegerField(default=0, verbose_name='评价数')
 	is_launched = models.BooleanField(default=True, verbose_name='是否上架销售')
 	default_image_url = models.CharField(max_length=200, default='', null=True, blank=True, verbose_name='默认图片')
+
+	objects = models.Manager()
 
 	class Meta:
 		db_table = 'tb_sku'
