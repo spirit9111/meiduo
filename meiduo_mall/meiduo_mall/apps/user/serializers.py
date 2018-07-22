@@ -4,6 +4,7 @@ from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
+from goods.models import SKU
 from user.models import User, Address
 from celery_tasks.send_email.tasks import send_to_email
 
@@ -226,3 +227,34 @@ class AddressTitleSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Address
 		fields = ('title',)
+
+
+class UserBrowseSerializer(serializers.Serializer):
+	"""校验sku_id,记录浏览记录"""
+
+	sku_id = serializers.IntegerField(min_value=1)
+
+	def validated_sku_id(self, value):
+		try:
+			SKU.objects.get(id=value)
+		except Exception as e:
+			raise serializers.ValidationError('sku_id不存在')
+		return value
+
+	def create(self, validated_data):
+		"""教研成功后吧浏览记录保存到redis"""
+		# redis 中保存的 形式:
+		# user_id:['sku_id1','sku_id2','sku_id3',]
+
+		user_id = self.context['request'].user.id
+		sku_id = validated_data['sku_id']
+		redis_conn = get_redis_connection('history')
+		pl = redis_conn.pipeline()
+		# 删除全部的相同的数据
+		pl.lrem("history_%s" % user_id, 0, sku_id)
+		pl.lpush("history_%s" % user_id, sku_id)
+		pl.ltrim("history_%s" % user_id, 0, 5)
+
+		pl.execute()
+
+		return validated_data

@@ -2,7 +2,7 @@ from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
 
 from user.views import UsernameView, MobileView, RegisterView, FindPasswordStepOneView, FindPasswordStepTwoView, \
-	FindPasswordStepThreeView, FindPasswordStepFourView, UserInfoView, SendAndSaveEmail, VerifyEmailView
+	FindPasswordStepThreeView, FindPasswordStepFourView, UserInfoView, SendAndSaveEmail, VerifyEmailView, UserBrowseView
 
 urlpatterns = [
 	# 注册
@@ -20,5 +20,7 @@ urlpatterns = [
 	# 用户中心
 	url(r'^user/', UserInfoView.as_view()),
 	url(r'^emails/$', SendAndSaveEmail.as_view()),
-	url(r'^emails/verification', VerifyEmailView.as_view()),
+	url(r'^emails/verification/', VerifyEmailView.as_view()),
+	# 用户浏览记录
+	url(r'^browse_histories/', UserBrowseView.as_view())
 ]

@@ -10,10 +10,12 @@ from rest_framework.mixins import UpdateModelMixin, CreateModelMixin
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
 
+from goods.models import SKU
+from goods.serializers import SKUSerializer
 from meiduo_mall.utils.exceptions import logger
 from user import serializers
 from user.serializers import RegisterSerializer, CheckSmsCodeSerializer, CheckUserIdSerializer, UserInfoSerializer, \
-	EmailSerializer, AddressSerializer
+	EmailSerializer, AddressSerializer, UserBrowseSerializer
 from user.models import User, Address
 from verifications.constants import SMS_CODE_REDIS_EXPIRES, SEND_SMS_CODE_INTERVAL
 from verifications.serializers import CheckImageCodeSerializer
@@ -281,3 +283,26 @@ class CreateOrUpdateAddressInfo(CreateModelMixin, UpdateModelMixin, GenericViewS
 		serializer.is_valid(raise_exception=True)
 		serializer.save()
 		return Response(serializer.data)
+
+
+class UserBrowseView(CreateModelMixin, GenericAPIView):
+	"""用户浏览记录"""
+	serializer_class = UserBrowseSerializer
+	permission_classes = [IsAuthenticated]
+
+	# 每次点击一个商品的详情页面把sku.id保存一份到redis中
+	def post(self, request):
+		return self.create(request)
+
+	# 返回数据展示
+	def get(self, request):
+		# 根据用户取出用户的浏览记录
+		user_id = request.user.id
+		redis_conn = get_redis_connection('history')
+		skus_list = redis_conn.lrange('history_%s' % user_id, 0, 5)
+		skus = []
+		for sku_id in skus_list:
+			sku_obj = SKU.objects.get(id=sku_id)
+			skus.append(sku_obj)
+		s = SKUSerializer(skus, many=True)
+		return Response(s.data)
