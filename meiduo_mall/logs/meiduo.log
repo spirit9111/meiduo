@@ -4963,3 +4963,174 @@ ERROR 2018-07-22 21:33:51,765 views 106 Error decoding signature.
 INFO 2018-07-22 21:33:55,098 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
 ERROR 2018-07-22 21:34:13,925 views 106 Error decoding signature.
 INFO 2018-07-22 21:34:24,399 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-22 21:53:39,178 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-22 21:53:39,218 views 106 Error decoding signature.
+INFO 2018-07-22 21:53:39,247 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:53:40,255 views 106 Error decoding signature.
+INFO 2018-07-22 21:53:40,299 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:53:40,807 views 106 Error decoding signature.
+INFO 2018-07-22 21:53:40,860 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:53:41,772 views 150 Error decoding signature.
+ERROR 2018-07-22 21:53:41,773 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 172, in put
+    cart['sku_id']['count'] = count
+KeyError: 'sku_id'
+ERROR 2018-07-22 21:53:41,824 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20404
+ERROR 2018-07-22 21:53:56,092 views 150 Error decoding signature.
+ERROR 2018-07-22 21:53:56,092 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 172, in put
+    cart['sku_id']['count'] = count
+KeyError: 'sku_id'
+ERROR 2018-07-22 21:53:56,121 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20404
+ERROR 2018-07-22 21:54:04,891 views 150 Error decoding signature.
+ERROR 2018-07-22 21:54:04,891 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 172, in put
+    cart['sku_id']['count'] = count
+KeyError: 'sku_id'
+ERROR 2018-07-22 21:54:04,916 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20404
+ERROR 2018-07-22 21:55:32,556 views 106 Error decoding signature.
+INFO 2018-07-22 21:55:32,589 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:55:34,545 views 150 Error decoding signature.
+ERROR 2018-07-22 21:55:34,545 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 172, in put
+    cart['sku_id']['count'] = count
+KeyError: 'sku_id'
+ERROR 2018-07-22 21:55:34,581 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20404
+ERROR 2018-07-22 21:55:45,710 views 106 Error decoding signature.
+INFO 2018-07-22 21:55:45,754 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:55:47,826 views 150 Error decoding signature.
+ERROR 2018-07-22 21:55:47,826 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 172, in put
+    cart['sku_id']['count'] = count
+KeyError: 'sku_id'
+ERROR 2018-07-22 21:55:47,850 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20404
+ERROR 2018-07-22 21:57:05,671 views 106 Error decoding signature.
+INFO 2018-07-22 21:57:09,816 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:57:14,585 views 150 Error decoding signature.
+ERROR 2018-07-22 21:57:58,219 views 106 Error decoding signature.
+INFO 2018-07-22 21:58:02,282 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:58:05,415 views 150 Error decoding signature.
+INFO 2018-07-22 21:58:21,134 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:04,909 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:04,912 basehttp 124 "PUT /cart/ HTTP/1.1" 201 40
+ERROR 2018-07-22 21:59:06,895 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:06,897 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:08,398 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:08,399 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:09,184 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:09,185 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:09,448 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:09,451 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+WARNING 2018-07-22 21:59:09,647 basehttp 124 "PUT /cart/ HTTP/1.1" 400 43
+ERROR 2018-07-22 21:59:11,739 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:11,739 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:11,953 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:11,954 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:12,131 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:12,132 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:12,333 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:12,335 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:14,935 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:14,936 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:15,112 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:15,113 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:15,295 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:15,296 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:15,491 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:15,494 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+WARNING 2018-07-22 21:59:15,700 basehttp 124 "PUT /cart/ HTTP/1.1" 400 43
+ERROR 2018-07-22 21:59:19,116 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:19,117 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:19,312 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:19,313 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:19,480 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:19,480 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:19,544 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:19,545 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-22 21:59:19,677 views 150 Error decoding signature.
+INFO 2018-07-22 21:59:19,681 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39

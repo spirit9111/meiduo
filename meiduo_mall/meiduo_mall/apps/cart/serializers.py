@@ -30,3 +30,6 @@ class CartSKUSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = SKU
 		fields = ['id', 'name', 'default_image_url', 'price', 'count', 'selected', ]
+
+# class PutCartSerializer(serializers.Serializer):
+# 	pass
