@@ -5134,3 +5134,80 @@ ERROR 2018-07-22 21:59:19,544 views 150 Error decoding signature.
 INFO 2018-07-22 21:59:19,545 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
 ERROR 2018-07-22 21:59:19,677 views 150 Error decoding signature.
 INFO 2018-07-22 21:59:19,681 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+INFO 2018-07-22 22:11:16,773 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-22 22:11:16,798 views 106 Error decoding signature.
+INFO 2018-07-22 22:11:16,829 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 22:11:18,071 views 106 Error decoding signature.
+INFO 2018-07-22 22:11:18,107 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 22:11:19,103 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 188, in delete
+    sku_id = serializer.validated_data('sku_id')
+TypeError: 'collections.OrderedDict' object is not callable
+ERROR 2018-07-22 22:11:19,149 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 20506
+ERROR 2018-07-22 22:11:28,788 views 106 Error decoding signature.
+INFO 2018-07-22 22:11:28,822 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 22:11:29,858 views 106 Error decoding signature.
+INFO 2018-07-22 22:11:29,903 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 22:11:31,945 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 188, in delete
+    sku_id = serializer.validated_data('sku_id')
+TypeError: 'collections.OrderedDict' object is not callable
+ERROR 2018-07-22 22:11:31,965 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 20506
+ERROR 2018-07-22 22:11:47,627 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 188, in delete
+    sku_id = serializer.validated_data('sku_id')
+TypeError: 'collections.OrderedDict' object is not callable
+ERROR 2018-07-22 22:11:47,652 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 20506
+ERROR 2018-07-22 22:12:56,939 views 193 Error decoding signature.
+INFO 2018-07-22 22:12:56,941 basehttp 124 "DELETE /cart/ HTTP/1.1" 200 13

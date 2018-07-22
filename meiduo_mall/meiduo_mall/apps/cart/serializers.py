@@ -31,5 +31,14 @@ class CartSKUSerializer(serializers.ModelSerializer):
 		model = SKU
 		fields = ['id', 'name', 'default_image_url', 'price', 'count', 'selected', ]
 
-# class PutCartSerializer(serializers.Serializer):
-# 	pass
+
+class DeleteCartSeralizer(serializers.Serializer):
+	sku_id = serializers.IntegerField(min_value=1)
+
+	def validate_sku_id(self, value):
+		try:
+			SKU.objects.get(id=value)
+		except Exception as e:
+			logger.error(e)
+			raise serializers.set_value('商品不存在')
+		return value

@@ -8,7 +8,7 @@ from django_redis import get_redis_connection
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from cart.serializers import AddSkuSerializer, CartSKUSerializer
+from cart.serializers import AddSkuSerializer, CartSKUSerializer, DeleteCartSeralizer
 from goods.models import SKU
 from meiduo_mall.utils.exceptions import logger
 
@@ -181,4 +181,43 @@ class CartView(APIView):
 			response.set_cookie('cart', cookie_cart, max_age=365 * 24 * 60 * 60)
 			return response
 
-# 购物车 删
+	# 购物车 删
+	def delete(self, request):
+		serializer = DeleteCartSeralizer(data=request.data)
+		serializer.is_valid(raise_exception=True)
+		sku_id = serializer.validated_data.get('sku_id')
+
+		try:
+			user = request.user
+		except Exception as e:
+			logger.error(e)
+			user = None
+
+		if user is not None and user.is_authenticated:
+			redis_conn = get_redis_connection('cart')
+			pl = redis_conn.pipeline()
+			pl.hdel('cart_%s' % user.id, sku_id)
+			pl.srem('cart_selected_%s' % user.id, sku_id)
+			pl.execute()
+			return Response(status=204)
+		else:
+			# cookie
+			cart_cookie = request.COOKIES.get('cart')
+
+			if cart_cookie:
+
+				cart_dict = pickle.loads(base64.b64decode(cart_cookie.encode()))
+			else:
+				cart_dict = {}
+
+			response = Response(serializer.data)
+
+			if sku_id in cart_dict:
+				# 删除字典的键值对
+				del cart_dict[sku_id]
+
+				cookie_cart = base64.b64encode(pickle.dumps(cart_dict)).decode()
+
+				response.set_cookie('cart', cookie_cart)
+
+			return response
