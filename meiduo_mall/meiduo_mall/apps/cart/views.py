@@ -8,7 +8,8 @@ from django_redis import get_redis_connection
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from cart.serializers import AddSkuSerializer
+from cart.serializers import AddSkuSerializer, CartSKUSerializer
+from goods.models import SKU
 from meiduo_mall.utils.exceptions import logger
 
 
@@ -96,9 +97,44 @@ class CartView(APIView):
 			response.set_cookie('cart', cookie_cart, max_age=365 * 24 * 60 * 60)
 			return response
 
-	# 购物车 改
-
 	# 购物车 查
 	def get(self, request):
-		pass
+		# 判断用户的登录状态,
+		try:
+			user = request.user
+		except Exception as e:
+			logger.error(e)
+			user = None
+		# 如果已经登录从redis中查询
+		if user is not None and user.is_authenticated:
+			redis_conn = get_redis_connection('cart')
+			# 分别查询两张表,byte类型
+			sku_id_count_dict = redis_conn.hgetall('cart_%s' % user.id)
+			selected_list = redis_conn.smembers('cart_selected_%s' % user.id)
+			# 调整
+			cart = {}
+			for sku_id, count in sku_id_count_dict.items():
+				cart[int(sku_id)] = {
+					'selected': sku_id in selected_list,
+					'count': int(count),
+				}
+
+		# 没有登录从cookie中查询
+		else:
+			cart_cookie = request.COOKIES.get('cart')
+			if cart_cookie is not None:
+				cart = pickle.loads(base64.b64decode(cart_cookie.encode()))
+			else:
+				cart = {}
+		# 返回数据给前端
+		sku_query_set = SKU.objects.filter(id__in=cart.keys())
+		for sku in sku_query_set:
+			# 再返回的数据中新增不在model中的额外字段
+			sku.count = cart[sku.id]['count']
+			sku.selected = cart[sku.id]['selected']
+
+		serializer = CartSKUSerializer(sku_query_set, many=True)
+		return Response(serializer.data)
+
+# 购物车 改
 # 购物车 删

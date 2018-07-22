@@ -4516,3 +4516,450 @@ INFO 2018-07-22 20:53:31,198 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
 INFO 2018-07-22 20:53:35,611 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
 INFO 2018-07-22 20:53:35,675 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
 INFO 2018-07-22 20:53:41,948 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-22 21:20:37,595 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-22 21:20:37,680 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 117, in get
+    for sku_id, count in sku_id_count_dict:
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-07-22 21:20:37,772 basehttp 124 "GET /cart/ HTTP/1.1" 500 20635
+ERROR 2018-07-22 21:20:38,903 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 117, in get
+    for sku_id, count in sku_id_count_dict:
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-07-22 21:20:38,937 basehttp 124 "GET /cart/ HTTP/1.1" 500 20635
+ERROR 2018-07-22 21:20:39,682 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 117, in get
+    for sku_id, count in sku_id_count_dict:
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-07-22 21:20:39,709 basehttp 124 "GET /cart/ HTTP/1.1" 500 20635
+ERROR 2018-07-22 21:20:40,227 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 117, in get
+    for sku_id, count in sku_id_count_dict:
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-07-22 21:20:40,256 basehttp 124 "GET /cart/ HTTP/1.1" 500 20635
+ERROR 2018-07-22 21:20:43,437 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 117, in get
+    for sku_id, count in sku_id_count_dict:
+ValueError: too many values to unpack (expected 2)
+ERROR 2018-07-22 21:20:43,499 basehttp 124 "GET /cart/ HTTP/1.1" 500 20635
+ERROR 2018-07-22 21:25:02,080 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 118, in get
+    for sku_id, count in sku_id_count_dict.items():
+AttributeError: 'StrictPipeline' object has no attribute 'items'
+ERROR 2018-07-22 21:25:02,234 basehttp 124 "GET /cart/ HTTP/1.1" 500 22277
+ERROR 2018-07-22 21:27:24,130 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:24,258 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:25,182 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:25,281 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:26,188 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:26,265 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:26,926 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:27,026 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:27,343 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:27,420 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:27,936 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:28,250 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:28,324 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:28,703 basehttp 124 "GET /cart/ HTTP/1.1" 500 22160
+ERROR 2018-07-22 21:27:28,735 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:29,057 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:29,071 basehttp 124 "GET /cart/ HTTP/1.1" 500 22160
+ERROR 2018-07-22 21:27:29,417 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:29,433 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:29,757 basehttp 124 "GET /cart/ HTTP/1.1" 500 22160
+ERROR 2018-07-22 21:27:29,770 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:29,914 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:27:29,933 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:30,015 basehttp 124 "GET /cart/ HTTP/1.1" 500 22160
+ERROR 2018-07-22 21:27:31,191 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:27:31,323 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+ERROR 2018-07-22 21:29:30,896 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/views.py", line 133, in get
+    sku.count = cart[sku.id]['count']
+KeyError: 16
+ERROR 2018-07-22 21:29:31,017 basehttp 124 "GET /cart/ HTTP/1.1" 500 22159
+INFO 2018-07-22 21:32:52,730 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-22 21:33:26,002 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:33:51,765 views 106 Error decoding signature.
+INFO 2018-07-22 21:33:55,098 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+ERROR 2018-07-22 21:34:13,925 views 106 Error decoding signature.
+INFO 2018-07-22 21:34:24,399 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
