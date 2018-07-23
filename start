@@ -10,6 +10,7 @@ live-server &
 # 重启docker
 docker container restart storage &
 docker container restart tracker &
+docker container restart elasticsearch &
 
 # 开启celery
 cd ../meiduo_mall

@@ -5211,3 +5211,453 @@ TypeError: 'collections.OrderedDict' object is not callable
 ERROR 2018-07-22 22:11:47,652 basehttp 124 "DELETE /cart/ HTTP/1.1" 500 20506
 ERROR 2018-07-22 22:12:56,939 views 193 Error decoding signature.
 INFO 2018-07-22 22:12:56,941 basehttp 124 "DELETE /cart/ HTTP/1.1" 200 13
+ERROR 2018-07-22 22:17:32,061 views 106 Error decoding signature.
+INFO 2018-07-22 22:17:32,139 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-22 22:17:32,133 base 152 Not Found: /categories/115/
+WARNING 2018-07-22 22:17:32,155 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8253
+INFO 2018-07-22 22:17:32,168 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-22 22:17:32,187 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-22 22:17:34,704 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1369
+INFO 2018-07-22 22:17:36,001 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-22 22:17:40,683 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-22 22:17:42,231 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-22 22:17:43,040 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-23 10:59:14,831 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 9791
+WARNING 2018-07-23 10:59:15,075 base 152 Not Found: /favicon.ico
+WARNING 2018-07-23 10:59:15,077 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 9460
+INFO 2018-07-23 10:59:24,057 basehttp 124 "GET /skus/search/?id=1 HTTP/1.1" 200 9756
+INFO 2018-07-23 11:00:51,463 basehttp 124 "GET /skus/search/?id=1 HTTP/1.1" 200 9756
+ERROR 2018-07-23 11:40:25,239 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:40:25,365 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 500 157144
+WARNING 2018-07-23 11:40:25,757 base 152 Not Found: /favicon.ico
+WARNING 2018-07-23 11:40:25,758 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 9460
+ERROR 2018-07-23 11:43:17,729 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:43:17,859 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 500 157144
+WARNING 2018-07-23 11:43:18,323 base 152 Not Found: /favicon.ico
+WARNING 2018-07-23 11:43:18,324 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 9460
+ERROR 2018-07-23 11:49:15,816 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:49:15,980 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 500 157279
+ERROR 2018-07-23 11:49:25,832 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:49:25,919 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 500 157157
+ERROR 2018-07-23 11:50:31,986 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:50:32,072 basehttp 124 "GET /skus/search/ HTTP/1.1" 500 156777
+WARNING 2018-07-23 11:50:41,524 base 152 Not Found: /skus
+WARNING 2018-07-23 11:50:41,524 basehttp 124 "GET /skus HTTP/1.1" 404 9439
+ERROR 2018-07-23 11:51:41,111 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:51:41,251 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 500 157292
+ERROR 2018-07-23 11:56:04,247 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 11:56:04,376 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 500 157157
+ERROR 2018-07-23 12:02:33,814 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 12:02:33,935 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 500 157292
+ERROR 2018-07-23 12:02:35,063 exception 135 Internal Server Error: /skus/search/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 45, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 225, in to_representation
+    ret = super(HaystackSerializer, self).to_representation(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/serializers.py", line 206, in get_fields
+    field_mapping[field_name] = self._field_mapping[field_type](**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/drf_haystack/fields.py", line 14, in __init__
+    super(DRFHaystackFieldMixin, self).__init__(**kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/fields.py", line 754, in __init__
+    super(CharField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_digits'
+ERROR 2018-07-23 12:02:35,160 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 500 157292
+INFO 2018-07-23 12:04:34,533 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 200 12462
+INFO 2018-07-23 12:06:04,109 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 200 12462
+INFO 2018-07-23 12:06:13,049 basehttp 124 "GET /skus/search/?id=1 HTTP/1.1" 200 10477
+INFO 2018-07-23 12:06:19,125 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:18,599 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:19,458 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:19,659 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:20,220 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:20,410 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:07:20,617 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:10:17,383 basehttp 124 "GET /skus/search/?name=iphone HTTP/1.1" 200 12280
+INFO 2018-07-23 12:10:23,184 basehttp 124 "GET /skus/search/?text=aaaa&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-07-23 12:10:27,669 basehttp 124 "GET /skus/search/?text=apple&page=1&page_size=6 HTTP/1.1" 200 2465
+INFO 2018-07-23 12:10:35,249 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 2634
