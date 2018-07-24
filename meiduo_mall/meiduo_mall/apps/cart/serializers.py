@@ -42,3 +42,7 @@ class DeleteCartSeralizer(serializers.Serializer):
 			logger.error(e)
 			raise serializers.set_value('商品不存在')
 		return value
+
+
+class CartSelectSerializer(serializers.Serializer):
+	selected = serializers.BooleanField(label='全选')

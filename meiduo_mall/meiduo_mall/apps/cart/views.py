@@ -8,7 +8,8 @@ from django_redis import get_redis_connection
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from cart.serializers import AddSkuSerializer, CartSKUSerializer, DeleteCartSeralizer
+from cart.serializers import AddSkuSerializer, CartSKUSerializer, DeleteCartSeralizer, CartSelectSerializer, \
+	CartSelectAllSerializer
 from goods.models import SKU
 from meiduo_mall.utils.exceptions import logger
 
@@ -220,4 +221,58 @@ class CartView(APIView):
 
 				response.set_cookie('cart', cookie_cart)
 
+			return response
+
+
+# PUT / cart / selection /
+class CartSelectAllView(APIView):
+	"""全选"""
+
+	def perform_authentication(self, request):
+		# 推迟身份验证行为
+		# 在request.user时进行首次验证
+		pass
+
+	def put(self, request):
+		serializer = CartSelectSerializer(data=request.data)
+		serializer.is_valid(raise_exception=True)
+		selected = serializer.validated_data.get('selected')
+		# 判断登录状态
+		try:
+			user = request.user
+		except Exception as e:
+			logger.error(e)
+			user = None
+		# 登录修改redis
+		if user is not None and user.is_authenticated:
+			redis_conn = get_redis_connection('cart')
+			pl = redis_conn.pipeline()
+			# 取出所有sku_id
+			cart_dict = pl.hgetall('cart_%s' % user.id)
+			sku_id_list = cart_dict.keys()
+
+			if selected:
+				# 勾选增加记录
+				pl.sadd('cart_selected_%s' % user.id, *sku_id_list)
+			else:
+				# 未勾选 删除记录
+				pl.srem('cart_selected_%s' % user.id, *sku_id_list)
+			pl.execute()
+
+			return Response({'message':'ok'})
+		# 未登录修改cookie
+		else:
+			cart_str = request.COOKIES.get('cart')
+			response = Response({'message':'ok'})
+			if cart_str is not None:
+				cart_dict = pickle.loads(base64.b64decode(cart_str.encode()))
+				# {
+				# 	sku_id:{'count':count,'selected':selected}
+				# }
+				sku_id_list = cart_dict.keys()
+				for sku_id in sku_id_list:
+					cart_dict[sku_id]['selected'] = selected
+				# 最后编码成str设置到cookie中保存
+				cookie_cart_str = base64.b64encode(pickle.dumps(cart_dict)).decode()
+				response.set_cookie('cart', cookie_cart_str, max_age=365 * 24 * 60 * 60)
 			return response
