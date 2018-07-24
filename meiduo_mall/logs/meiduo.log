@@ -6085,3 +6085,269 @@ ERROR 2018-07-24 11:44:47,358 views 244 Error decoding signature.
 INFO 2018-07-24 11:44:47,359 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
 ERROR 2018-07-24 11:44:48,024 views 107 Error decoding signature.
 INFO 2018-07-24 11:44:48,077 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+ERROR 2018-07-24 11:48:04,957 views 106 Error decoding signature.
+INFO 2018-07-24 11:48:05,012 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+ERROR 2018-07-24 11:48:06,933 views 243 Error decoding signature.
+INFO 2018-07-24 11:48:06,936 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+ERROR 2018-07-24 11:48:08,490 views 106 Error decoding signature.
+INFO 2018-07-24 11:48:08,550 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+ERROR 2018-07-24 11:48:10,905 views 150 Error decoding signature.
+INFO 2018-07-24 11:48:10,906 basehttp 124 "PUT /cart/ HTTP/1.1" 201 40
+ERROR 2018-07-24 11:48:11,311 views 150 Error decoding signature.
+INFO 2018-07-24 11:48:11,314 basehttp 124 "PUT /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-24 11:48:12,429 views 243 Error decoding signature.
+INFO 2018-07-24 11:48:12,433 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+ERROR 2018-07-24 11:48:13,300 views 106 Error decoding signature.
+INFO 2018-07-24 11:48:13,331 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+ERROR 2018-07-24 11:48:14,066 views 243 Error decoding signature.
+INFO 2018-07-24 11:48:14,068 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 16
+ERROR 2018-07-24 11:48:15,297 views 106 Error decoding signature.
+INFO 2018-07-24 11:48:15,316 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+INFO 2018-07-24 20:15:43,639 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:15:43,677 views 106 Error decoding signature.
+INFO 2018-07-24 20:15:43,742 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+ERROR 2018-07-24 20:15:46,682 views 106 Error decoding signature.
+INFO 2018-07-24 20:15:46,700 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+INFO 2018-07-24 20:16:04,673 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:16:04,765 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 13, in merge_cookie_to_redis
+    cookie_cart_str = request.COOKIE.get('cart')
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-07-24 20:16:04,825 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 21050
+WARNING 2018-07-24 20:16:17,206 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 11941
+WARNING 2018-07-24 20:17:04,662 basehttp 124 "GET /authorizations/ HTTP/1.1" 405 11941
+ERROR 2018-07-24 20:17:16,141 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 13, in merge_cookie_to_redis
+    cookie_cart_str = request.COOKIE.get('cart')
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-07-24 20:17:16,162 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 21050
+ERROR 2018-07-24 20:18:29,255 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 13, in merge_cookie_to_redis
+    cookie_cart_str = request.COOKIE.get('cart')
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-07-24 20:18:29,301 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 21050
+ERROR 2018-07-24 20:19:15,127 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 13, in merge_cookie_to_redis
+    cookie_cart_str = request.COOKIE.get('cart')
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-07-24 20:19:15,144 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 21050
+INFO 2018-07-24 20:19:55,614 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:19:59,286 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-24 20:20:02,480 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-24 20:20:20,199 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-24 20:20:31,017 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-07-24 20:20:32,625 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-24 20:20:41,452 views 106 Error decoding signature.
+INFO 2018-07-24 20:20:41,517 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+ERROR 2018-07-24 20:20:43,062 views 106 Error decoding signature.
+INFO 2018-07-24 20:20:43,094 basehttp 124 "GET /cart/ HTTP/1.1" 200 462
+ERROR 2018-07-24 20:22:18,767 views 150 Error decoding signature.
+INFO 2018-07-24 20:22:18,770 basehttp 124 "PUT /cart/ HTTP/1.1" 201 40
+ERROR 2018-07-24 20:22:20,945 views 106 Error decoding signature.
+INFO 2018-07-24 20:22:20,999 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+INFO 2018-07-24 20:22:32,301 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:22:35,432 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-24 20:24:16,680 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-24 20:24:23,926 views 106 Error decoding signature.
+INFO 2018-07-24 20:24:24,036 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+INFO 2018-07-24 20:25:30,383 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:26:23,370 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:26:23,462 views 106 Error decoding signature.
+WARNING 2018-07-24 20:26:23,497 base 152 Not Found: /categories/115/
+WARNING 2018-07-24 20:26:23,505 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9638
+INFO 2018-07-24 20:26:23,596 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-24 20:26:23,647 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-24 20:26:23,696 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-24 20:26:24,757 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:26:24,870 views 106 Error decoding signature.
+WARNING 2018-07-24 20:26:24,899 base 152 Not Found: /categories/157/
+WARNING 2018-07-24 20:26:24,902 basehttp 124 "GET /categories/157/ HTTP/1.1" 404 9638
+INFO 2018-07-24 20:26:24,930 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-24 20:26:24,939 basehttp 124 "GET /categories/157/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 452
+INFO 2018-07-24 20:26:25,076 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 200 402
+INFO 2018-07-24 20:26:27,190 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+ERROR 2018-07-24 20:26:29,758 views 38 Error decoding signature.
+INFO 2018-07-24 20:26:30,246 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-24 20:26:43,271 basehttp 124 "GET /categories/157/hotskus/ HTTP/1.1" 200 402
+ERROR 2018-07-24 20:26:46,755 views 38 Error decoding signature.
+INFO 2018-07-24 20:26:46,758 basehttp 124 "POST /cart/ HTTP/1.1" 201 38
+ERROR 2018-07-24 20:26:50,082 views 106 Error decoding signature.
+INFO 2018-07-24 20:26:50,216 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+ERROR 2018-07-24 20:26:52,503 views 150 Error decoding signature.
+INFO 2018-07-24 20:26:52,506 basehttp 124 "PUT /cart/ HTTP/1.1" 201 40
+ERROR 2018-07-24 20:26:54,550 views 150 Error decoding signature.
+INFO 2018-07-24 20:26:54,552 basehttp 124 "PUT /cart/ HTTP/1.1" 201 38
+ERROR 2018-07-24 20:26:55,143 views 150 Error decoding signature.
+INFO 2018-07-24 20:26:55,144 basehttp 124 "PUT /cart/ HTTP/1.1" 201 38
+ERROR 2018-07-24 20:26:57,855 views 106 Error decoding signature.
+INFO 2018-07-24 20:26:57,900 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+INFO 2018-07-24 20:27:19,907 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-24 20:28:28,509 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:29:59,337 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:29:59,683 views 106 Error decoding signature.
+INFO 2018-07-24 20:29:59,843 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+ERROR 2018-07-24 20:30:04,525 views 106 Error decoding signature.
+INFO 2018-07-24 20:30:04,678 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+INFO 2018-07-24 20:30:13,083 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:30:13,173 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 35, in merge_cookie_to_redis
+    redis_cart_dict = redis_conn.hget('cart_%s' % user.id)
+TypeError: hget() missing 1 required positional argument: 'key'
+ERROR 2018-07-24 20:30:13,235 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 20835
+ERROR 2018-07-24 20:30:26,478 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/user/views.py", line 325, in post
+    response = merge_cookie_to_redis(request, user, response)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/cart/utils.py", line 35, in merge_cookie_to_redis
+    redis_cart_dict = redis_conn.hget('cart_%s' % user.id)
+TypeError: hget() missing 1 required positional argument: 'key'
+ERROR 2018-07-24 20:30:26,704 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 20835
+INFO 2018-07-24 20:31:53,534 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:32:07,271 basehttp 124 "GET /cart/ HTTP/1.1" 200 464

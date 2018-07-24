@@ -9,7 +9,9 @@ from rest_framework.response import Response
 from rest_framework.mixins import UpdateModelMixin, CreateModelMixin
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
+from rest_framework_jwt.views import ObtainJSONWebToken
 
+from cart.utils import merge_cookie_to_redis
 from goods.models import SKU
 from goods.serializers import SKUSerializer
 from meiduo_mall.utils.exceptions import logger
@@ -306,3 +308,19 @@ class UserBrowseView(CreateModelMixin, GenericAPIView):
 			skus.append(sku_obj)
 		s = SKUSerializer(skus, many=True)
 		return Response(s.data)
+
+
+class UserAuthorizeView(ObtainJSONWebToken):
+	"""修改登录的逻辑,在登录的同时增加合并购物车的功能"""
+
+	def post(self, request, *args, **kwargs):
+		# 调用父类的方法，获取drf jwt扩展默认的认证用户处理结果
+		response = super().post(request, *args, **kwargs)
+
+		# 仿照drf jwt扩展对于用户登录的认证方式，判断用户是否认证登录成功
+		# 如果用户登录认证成功，则合并购物车
+		serializer = self.get_serializer(data=request.data)
+		if serializer.is_valid():
+			user = serializer.validated_data.get('user')
+			response = merge_cookie_to_redis(request, user, response)
+		return response

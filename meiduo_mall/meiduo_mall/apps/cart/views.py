@@ -8,8 +8,7 @@ from django_redis import get_redis_connection
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from cart.serializers import AddSkuSerializer, CartSKUSerializer, DeleteCartSeralizer, CartSelectSerializer, \
-	CartSelectAllSerializer
+from cart.serializers import AddSkuSerializer, CartSKUSerializer, DeleteCartSeralizer, CartSelectSerializer
 from goods.models import SKU
 from meiduo_mall.utils.exceptions import logger
 
@@ -224,7 +223,7 @@ class CartView(APIView):
 			return response
 
 
-# PUT / cart / selection /
+# PUT /cart/selection
 class CartSelectAllView(APIView):
 	"""全选"""
 
