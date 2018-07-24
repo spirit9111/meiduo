@@ -6351,3 +6351,13 @@ TypeError: hget() missing 1 required positional argument: 'key'
 ERROR 2018-07-24 20:30:26,704 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 20835
 INFO 2018-07-24 20:31:53,534 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
 INFO 2018-07-24 20:32:07,271 basehttp 124 "GET /cart/ HTTP/1.1" 200 464
+INFO 2018-07-24 20:43:31,811 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-24 20:43:31,825 views 106 Error decoding signature.
+INFO 2018-07-24 20:43:31,834 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-24 20:43:33,783 views 106 Error decoding signature.
+INFO 2018-07-24 20:43:33,795 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-24 20:43:34,535 views 106 Error decoding signature.
+INFO 2018-07-24 20:43:34,550 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-24 20:43:48,691 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-24 20:43:48,792 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 20:43:51,146 basehttp 124 "GET /cart/ HTTP/1.1" 200 464

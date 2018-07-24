@@ -3,6 +3,8 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
+
+from cart.utils import merge_cookie_to_redis
 from meiduo_mall.utils.exceptions import logger
 from oauth.models import OAuthQQUser
 from oauth.serializers import OAuthQQUserSerializer
@@ -78,7 +80,9 @@ class QQAuthUserView(GenericAPIView):
 				'username': user.username,
 				'token': jwt_token
 			}
-			return Response(data=data)
+			response = Response(data=data)
+			response = merge_cookie_to_redis(request, user, response)
+			return response
 
 	def post(self, request):
 		"""QQ绑定网站账号/注册新账号"""
@@ -97,4 +101,6 @@ class QQAuthUserView(GenericAPIView):
 			'username': user.mobile,
 			'token': jwt_token
 		}
-		return Response(data=data)
+		response = Response(data=data)
+		response = merge_cookie_to_redis(request, user, response)
+		return response
