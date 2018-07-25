@@ -6874,3 +6874,347 @@ INFO 2018-07-24 21:32:54,687 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
 INFO 2018-07-24 21:32:54,732 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
 INFO 2018-07-24 21:32:57,595 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
 INFO 2018-07-24 21:32:57,609 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+INFO 2018-07-24 21:37:57,590 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+INFO 2018-07-24 21:39:47,433 basehttp 124 "GET /oauth/qq/authorization/?state=/ HTTP/1.1" 200 198
+INFO 2018-07-24 21:43:55,933 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-24 21:43:56,004 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-24 21:43:56,091 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-24 21:43:56,129 basehttp 124 "GET /cart/ HTTP/1.1" 200 463
+INFO 2018-07-24 21:43:57,297 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-24 21:43:57,301 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-24 21:43:57,377 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+INFO 2018-07-24 21:43:57,379 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 16:22:44,730 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 16:22:44,752 base 152 Not Found: /orders/
+WARNING 2018-07-25 16:22:44,753 basehttp 124 "POST /orders/ HTTP/1.1" 404 9782
+INFO 2018-07-25 16:22:49,460 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 16:22:49,476 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 16:22:49,611 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 16:22:49,649 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+WARNING 2018-07-25 16:22:52,795 base 152 Not Found: /orders/
+WARNING 2018-07-25 16:22:52,795 basehttp 124 "POST /orders/ HTTP/1.1" 404 9782
+INFO 2018-07-25 17:31:03,850 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:31:03,852 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:31:04,066 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+INFO 2018-07-25 17:31:04,087 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:31:08,841 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:31:08,876 base 152 Not Found: /orders/
+WARNING 2018-07-25 17:31:08,879 basehttp 124 "POST /orders/ HTTP/1.1" 404 9782
+INFO 2018-07-25 17:32:11,476 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+ERROR 2018-07-25 17:32:16,760 serializers 150 'SKU' object does not support indexing
+ERROR 2018-07-25 17:32:16,771 exception 135 Internal Server Error: /orders/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/orders/serializers.py", line 113, in create
+    sku_count = sku_obj[sku_obj.id]  # 订单中的count
+TypeError: 'SKU' object does not support indexing
+ERROR 2018-07-25 17:32:16,830 basehttp 124 "POST /orders/ HTTP/1.1" 500 21304
+INFO 2018-07-25 17:34:52,955 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 458
+INFO 2018-07-25 17:34:52,967 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:34:57,279 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+ERROR 2018-07-25 17:37:56,833 views 24 --->图片验证码:[AVSV]<---
+ERROR 2018-07-25 17:37:56,834 views 25 --->UUID:[e114cea2-dfa0-4ae4-82fc-e0aa0c71f5f6]<---
+INFO 2018-07-25 17:37:56,857 basehttp 124 "GET /image_code/e114cea2-dfa0-4ae4-82fc-e0aa0c71f5f6/ HTTP/1.1" 200 3200
+INFO 2018-07-25 17:38:04,409 basehttp 124 "GET /username/13211111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-25 17:38:12,490 basehttp 124 "GET /username/13211111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-25 17:38:13,072 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+ERROR 2018-07-25 17:38:15,878 serializers 19 {'request': <rest_framework.request.Request object at 0x7fa971df9518>, 'format': None, 'view': <verifications.views.SmsCodeView object at 0x7fa971df9358>}
+ERROR 2018-07-25 17:38:15,880 views 44 --->短信验证码:[259932]<---
+INFO 2018-07-25 17:38:15,938 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-25 17:38:15,968 basehttp 124 "GET /sms_code/13211111111/?text=avsv&image_code_id=e114cea2-dfa0-4ae4-82fc-e0aa0c71f5f6 HTTP/1.1" 200 16
+INFO 2018-07-25 17:38:25,533 basehttp 124 "GET /username/13211111111/count/ HTTP/1.1" 200 36
+INFO 2018-07-25 17:38:25,572 basehttp 124 "OPTIONS /register/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:38:25,615 basehttp 124 "GET /mobiles/13211111111/count/ HTTP/1.1" 200 34
+INFO 2018-07-25 17:38:25,712 basehttp 124 "POST /register/ HTTP/1.1" 201 236
+INFO 2018-07-25 17:38:31,375 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:38:31,416 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:38:31,425 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:38:31,442 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:38:31,486 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:38:31,492 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:38:33,574 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:38:33,646 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:38:33,701 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:38:35,860 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:38:40,191 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:38:49,556 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:38:49,557 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:38:49,627 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:38:49,631 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-07-25 17:38:52,823 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-07-25 17:38:52,831 basehttp 124 "GET /addresses/ HTTP/1.1" 200 64
+INFO 2018-07-25 17:39:01,969 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-07-25 17:39:02,711 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-07-25 17:39:12,600 basehttp 124 "POST /addresses/ HTTP/1.1" 201 274
+INFO 2018-07-25 17:39:18,145 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:39:32,616 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:39:32,657 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 17:39:39,808 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:39:39,815 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:39:39,837 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:39:39,849 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:39:39,850 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:39:40,736 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:39:40,760 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:39:40,827 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:39:43,303 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:39:46,781 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:39:49,142 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:39:49,170 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:40:46,335 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:40:46,385 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:41:05,606 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:41:05,621 basehttp 124 "POST /orders/ HTTP/1.1" 400 42
+INFO 2018-07-25 17:41:13,112 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-07-25 17:42:06,025 basehttp 124 "POST /orders/ HTTP/1.1" 400 42
+INFO 2018-07-25 17:42:07,723 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:42:07,731 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:42:08,481 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:42:08,490 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:42:13,327 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:42:15,023 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:42:15,035 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+WARNING 2018-07-25 17:42:18,710 basehttp 124 "POST /orders/ HTTP/1.1" 400 42
+INFO 2018-07-25 17:42:30,134 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:42:30,143 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:42:36,552 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-07-25 17:42:36,634 basehttp 124 "GET /addresses/ HTTP/1.1" 200 338
+INFO 2018-07-25 17:42:37,847 basehttp 124 "OPTIONS /addresses/6/status/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:42:37,906 basehttp 124 "PUT /addresses/6/status/ HTTP/1.1" 200 16
+INFO 2018-07-25 17:42:42,005 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:42:42,010 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:42:50,669 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 17:43:21,555 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 17:44:23,806 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:44:23,810 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:44:23,845 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:44:23,880 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:44:23,889 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:44:25,715 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:44:25,719 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:44:26,982 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:44:30,442 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:44:32,827 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:44:32,833 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:44:41,833 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 17:45:32,780 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:45:32,827 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-07-25 17:45:33,027 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 17:47:12,071 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:47:12,090 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:47:13,911 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:47:16,547 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:47:17,919 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:47:20,813 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:47:23,484 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:47:23,485 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:47:35,914 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 17:49:47,436 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:49:47,449 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:49:47,460 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:49:47,463 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:49:47,473 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:49:47,485 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:49:48,932 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:49:48,960 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:49:49,050 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+WARNING 2018-07-25 17:49:50,381 basehttp 124 "POST /cart/ HTTP/1.1" 400 43
+INFO 2018-07-25 17:50:00,998 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+WARNING 2018-07-25 17:50:10,704 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:50:10,722 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:50:10,815 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:50:10,913 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:50:10,918 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:50:12,570 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:50:12,586 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:50:14,467 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:50:18,223 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:50:19,686 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:50:19,724 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:50:32,702 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:50:41,025 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:50:43,105 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-07-25 17:50:45,160 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:50:45,163 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:50:45,292 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:50:45,344 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:50:52,046 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:50:57,467 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 17:52:16,936 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:52:16,964 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:52:23,503 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:52:23,741 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+INFO 2018-07-25 17:52:45,513 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-07-25 17:52:57,993 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:52:58,005 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:52:58,176 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:52:58,519 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:52:58,521 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:53:02,734 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:53:02,778 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+WARNING 2018-07-25 17:53:07,442 basehttp 124 "POST /cart/ HTTP/1.1" 400 43
+INFO 2018-07-25 17:53:24,603 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:53:31,209 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:53:35,777 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:53:35,785 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:53:53,004 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 17:54:35,703 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:54:35,715 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:54:37,437 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:54:37,621 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:54:37,626 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:54:57,779 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:54:57,790 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:54:58,901 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:55:02,114 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:55:03,741 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:55:03,772 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:55:16,442 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 17:55:43,590 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:55:43,651 basehttp 124 "GET /user/ HTTP/1.1" 200 105
+INFO 2018-07-25 17:55:43,680 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 17:55:46,165 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:56:25,255 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:56:25,256 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:56:26,699 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:56:26,700 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:56:29,319 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 17:56:29,379 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+INFO 2018-07-25 17:56:32,466 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:56:32,470 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:56:34,011 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:56:34,028 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:57:02,728 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-07-25 17:57:04,251 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:57:04,253 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:57:04,268 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:57:04,281 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:57:04,292 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:57:05,428 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:57:05,434 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+WARNING 2018-07-25 17:57:07,089 basehttp 124 "POST /cart/ HTTP/1.1" 400 43
+INFO 2018-07-25 17:57:30,127 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:57:32,985 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:57:36,423 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 17:57:36,431 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 17:57:45,382 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:57:45,910 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-25 17:57:45,987 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 17:57:51,599 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 17:57:51,609 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 17:57:51,677 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:57:51,686 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 17:57:51,724 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 17:57:57,743 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:57:58,374 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:58:20,734 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:58:24,497 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 17:59:01,779 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 17:59:01,863 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 17:59:25,462 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 17:59:43,227 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-07-25 17:59:47,988 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 17:59:47,993 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:00:06,048 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 18:01:53,423 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+WARNING 2018-07-25 18:01:53,464 basehttp 124 "POST /orders/ HTTP/1.1" 400 59
+INFO 2018-07-25 18:02:02,064 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:02:02,124 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:02:03,568 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:02:03,579 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:02:03,682 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:02:03,698 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+WARNING 2018-07-25 18:02:27,449 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
+INFO 2018-07-25 18:03:08,001 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:08,120 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 18:03:12,396 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+WARNING 2018-07-25 18:03:12,449 base 152 Not Found: /categories/115/
+INFO 2018-07-25 18:03:12,455 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 18:03:12,467 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 18:03:12,468 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 18:03:13,827 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:13,839 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 18:03:13,889 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+WARNING 2018-07-25 18:03:15,399 basehttp 124 "POST /cart/ HTTP/1.1" 400 43
+INFO 2018-07-25 18:03:39,394 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 18:03:42,084 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:42,111 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-07-25 18:03:42,196 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 18:03:43,608 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:03:46,098 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:46,098 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:46,186 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 18:03:46,187 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:03:53,948 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:03:53,970 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 18:03:55,971 basehttp 124 "GET /user/ HTTP/1.1" 200 105
+INFO 2018-07-25 18:03:55,983 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:03:56,011 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 18:03:56,772 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:03:57,975 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 18:03:57,978 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:04:07,346 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:04:11,679 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 18:06:12,449 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:06:12,497 basehttp 124 "GET /user/ HTTP/1.1" 200 105
+INFO 2018-07-25 18:06:12,527 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 18:06:13,653 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 18:06:13,663 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 18:06:15,166 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 18:06:17,912 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:06:18,969 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:06:18,980 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 18:06:25,758 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:06:25,799 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 18:06:30,573 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:06:34,963 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 18:14:32,687 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-07-25 18:14:32,729 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 18:14:32,731 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 9963
+INFO 2018-07-25 18:14:32,744 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 18:14:32,753 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 18:14:32,755 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 18:14:33,959 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:14:33,970 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 686
+INFO 2018-07-25 18:14:34,013 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+WARNING 2018-07-25 18:14:34,962 basehttp 124 "POST /cart/ HTTP/1.1" 400 43
+INFO 2018-07-25 18:14:49,807 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 18:14:52,054 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:14:53,870 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:14:53,872 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:14:53,977 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:14:53,977 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 18:14:57,438 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:14:57,457 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 18:14:59,261 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-07-25 18:14:59,335 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 238
+INFO 2018-07-25 18:15:00,495 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 18:15:01,729 basehttp 124 "GET /addresses/ HTTP/1.1" 200 335
+INFO 2018-07-25 18:15:01,739 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 18:15:07,542 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:15:08,469 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 18:15:12,926 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-07-25 18:15:13,515 basehttp 124 "POST /orders/ HTTP/1.1" 400 16
