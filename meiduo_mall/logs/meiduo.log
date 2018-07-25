@@ -7455,3 +7455,196 @@ ValueError: RSA key format is not supported
 ERROR 2018-07-25 20:38:32,163 basehttp 124 "GET /orders/20180725123811000000002/payment/ HTTP/1.1" 500 21308
 INFO 2018-07-25 20:55:05,746 basehttp 124 "OPTIONS /orders/20180725123811000000002/payment/ HTTP/1.1" 200 0
 INFO 2018-07-25 20:55:06,216 basehttp 124 "GET /orders/20180725123811000000002/payment/ HTTP/1.1" 200 837
+WARNING 2018-07-25 21:46:51,133 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 21:46:51,139 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 21:46:51,153 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 21:46:51,154 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:46:51,155 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 21:46:52,108 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:46:52,124 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:46:52,183 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 21:46:53,804 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 21:46:56,609 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 21:46:57,624 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 21:46:57,645 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 21:47:02,208 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 21:47:03,488 basehttp 124 "OPTIONS /orders/20180725134702000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:47:03,586 basehttp 124 "GET /orders/20180725134702000000002/payment/ HTTP/1.1" 200 815
+WARNING 2018-07-25 21:52:13,576 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 21:52:13,583 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 21:52:13,591 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 21:52:13,600 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 21:52:13,601 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:52:14,481 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:52:14,500 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 21:52:15,640 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 21:52:18,350 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 21:52:19,266 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 21:52:19,293 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 21:52:22,611 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 21:52:23,694 basehttp 124 "OPTIONS /orders/20180725135222000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:52:23,794 basehttp 124 "GET /orders/20180725135222000000002/payment/ HTTP/1.1" 200 821
+INFO 2018-07-25 21:54:44,365 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-07-25 21:54:44,423 base 152 Not Found: /categories/115/
+INFO 2018-07-25 21:54:44,425 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+WARNING 2018-07-25 21:54:44,426 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 21:54:44,459 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 21:54:44,460 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 21:54:45,594 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:54:45,621 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 21:54:47,486 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 21:54:49,128 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 21:54:50,264 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:54:50,265 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:54:50,333 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 21:54:50,398 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 21:54:54,867 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:54:54,992 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 21:55:16,408 basehttp 124 "OPTIONS /orders/20180725135454000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:55:16,543 basehttp 124 "GET /orders/20180725135454000000002/payment/ HTTP/1.1" 200 831
+INFO 2018-07-25 21:56:49,868 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-25 21:56:49,877 views 106 Error decoding signature.
+WARNING 2018-07-25 21:56:49,904 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 21:56:49,924 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 21:56:49,925 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 21:56:49,930 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 21:56:49,936 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 21:56:51,147 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+ERROR 2018-07-25 21:56:52,410 views 38 Error decoding signature.
+INFO 2018-07-25 21:56:52,412 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-25 21:56:54,719 views 106 Error decoding signature.
+INFO 2018-07-25 21:56:54,733 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 21:57:02,287 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:57:02,375 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-25 21:57:02,467 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 21:57:03,510 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:57:03,517 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:57:03,594 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 21:57:03,616 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 21:57:17,315 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:57:17,413 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 21:57:20,479 basehttp 124 "OPTIONS /orders/20180725135717000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 21:57:20,585 basehttp 124 "GET /orders/20180725135717000000002/payment/ HTTP/1.1" 200 825
+WARNING 2018-07-25 22:00:59,779 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 22:00:59,787 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 22:00:59,820 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:00:59,835 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:00:59,850 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:01:00,882 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:01:00,896 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:01:00,967 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:01:02,042 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:01:03,972 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:01:05,799 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:01:05,860 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:01:08,781 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 22:01:10,186 basehttp 124 "OPTIONS /orders/20180725140108000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:01:10,281 basehttp 124 "GET /orders/20180725140108000000002/payment/ HTTP/1.1" 200 823
+INFO 2018-07-25 22:07:05,316 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:07:05,317 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:07:05,423 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:07:05,437 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 29
+INFO 2018-07-25 22:07:05,519 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:07:05,556 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+WARNING 2018-07-25 22:07:14,227 base 152 Not Found: /categories/115/
+INFO 2018-07-25 22:07:14,229 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+WARNING 2018-07-25 22:07:14,232 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 22:07:14,240 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:07:14,253 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:07:15,334 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:07:15,339 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:07:16,699 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:07:19,034 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:07:20,174 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:07:20,209 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:07:23,440 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:07:23,546 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 22:07:24,697 basehttp 124 "OPTIONS /orders/20180725140723000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:07:24,806 basehttp 124 "GET /orders/20180725140723000000002/payment/ HTTP/1.1" 200 831
+WARNING 2018-07-25 22:09:50,463 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 22:09:50,470 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 22:09:50,478 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:09:50,483 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:09:50,484 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:09:52,281 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:09:52,306 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:09:53,710 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:09:56,504 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:09:57,817 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:09:57,829 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:09:59,739 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+WARNING 2018-07-25 22:10:05,863 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 22:10:05,866 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 22:10:05,878 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:10:05,881 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:10:05,883 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:10:06,950 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:10:06,955 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:10:08,132 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:10:10,445 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:10:12,963 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:10:12,981 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:10:16,002 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 22:10:17,758 basehttp 124 "OPTIONS /orders/20180725141015000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:10:17,852 basehttp 124 "GET /orders/20180725141015000000002/payment/ HTTP/1.1" 200 846
+WARNING 2018-07-25 22:16:37,203 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 22:16:37,204 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10317
+INFO 2018-07-25 22:16:37,233 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:16:37,249 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:16:37,272 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:16:38,202 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:16:38,227 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:16:38,252 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:16:39,710 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:16:42,084 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:16:44,050 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:16:44,051 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:16:48,267 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 22:18:22,055 basehttp 124 "OPTIONS /orders/20180725141647000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:18:22,172 basehttp 124 "GET /orders/20180725141647000000002/payment/ HTTP/1.1" 200 834
+INFO 2018-07-25 22:21:59,047 basehttp 124 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 200 0
+INFO 2018-07-25 22:21:59,303 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 200 43
+ERROR 2018-07-25 22:21:59,611 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdae8114ac8>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:21:59,613 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:00,351 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdadb5bbd68>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:00,352 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:00,851 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdae806fba8>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:00,852 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:02,100 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdadb5bb278>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:02,101 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:02,693 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdadb5cb358>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:02,694 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:03,168 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdadb5c6160>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:03,169 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:03,312 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fdadb5bbf28>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:03,317 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:22:45,830 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fa7382fbda0>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:22:45,832 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:23:02,627 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fa7382b49e8>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:23:02,628 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:23:03,350 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fa73827a390>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:23:03,352 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:23:04,190 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fa7382760b8>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:23:04,192 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+ERROR 2018-07-25 22:24:39,103 exceptions 26 [<payment.views.SaveChangeStatusView object at 0x7fa738277ba8>] (1062, "Duplicate entry '2018072521001004490200539034' for key 'trade_id'")
+ERROR 2018-07-25 22:24:39,106 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725141647000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=Uke3BS8X9eBEg8BOCaZo6qG3jteK1HnVt3044s4SWcWqX86G%2BsEuqJw7aqxUkgxhEkokYb4%2FQWRFkGT7m%2FBzhoCYg2DFys6yYbHKrk4HVml9y07jv7LBkdN%2F9vDBNBC8Douy%2BEvVVhmlOXHFzR%2FuJWBhD0CREl5335rf2sbvMZuEumyaKoXbISlKfgTgSBn5rEFf9sFOxtRtzlJNH6sOhShGeA1npCA9pi%2BwcEDi3XCNx1KcUcAenZy2YuQ%2BJ9xriG3bdSwe6RGmS6QqS3S6J1Q6vB4e2t9sMIaCGTaTeJTNcuydt60vkLnASXSeL9e6NbG3DuT%2Bpek%2FyjvW4iRGEQ%3D%3D&trade_no=2018072521001004490200539034&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A20%3A15 HTTP/1.1" 507 35
+INFO 2018-07-25 22:26:06,355 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-07-25 22:26:06,415 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 22:26:06,441 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10316
+INFO 2018-07-25 22:26:06,449 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:26:06,473 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 22:26:06,532 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 22:26:07,924 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+INFO 2018-07-25 22:26:07,949 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-07-25 22:26:09,966 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+INFO 2018-07-25 22:26:13,536 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 22:26:15,166 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:26:15,171 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:26:15,284 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 22:26:15,338 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 22:26:18,639 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:26:19,040 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 22:26:20,867 basehttp 124 "OPTIONS /orders/20180725142618000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 22:26:21,001 basehttp 124 "GET /orders/20180725142618000000002/payment/ HTTP/1.1" 200 840
+INFO 2018-07-25 22:27:05,289 basehttp 124 "OPTIONS /payment/status/?charset=utf-8&out_trade_no=20180725142618000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=g4Ewgo0mN9Ivs%2BUSIfRDJba3Bw7sWse29HOrNktQpbKAq0rh%2BtKN8SW454LgpTCHOt7TJGok92WMope%2FCbhVMUly0bP%2F%2FE7oynKIm1n5BwCe0YGaRz8H6RW%2By5x697Qw5sy5%2BybRrAAG0Bi1z1%2FgkV2Wbtoj22LUXZmhoWl2hxzbihST2xCbIKTwSXOKocmqfxC6O1Cjw3qecShwpjm3Af7viw8Mr2PGq9V%2BgRo8WJbTUAC9WcIHuVTisxjQOKLoTpJ7FbM0YAaNr9PHtc63ZgTR1IcOakrmiK9AdlUO37dpKE2dpWJMzoMkxztk7h3ywrpExnGk7%2B9syNTDo%2BnzaA%3D%3D&trade_no=2018072521001004490200538558&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A27%3A01 HTTP/1.1" 200 0
+INFO 2018-07-25 22:27:05,568 basehttp 124 "PUT /payment/status/?charset=utf-8&out_trade_no=20180725142618000000002&method=alipay.trade.page.pay.return&total_amount=3798.00&sign=g4Ewgo0mN9Ivs%2BUSIfRDJba3Bw7sWse29HOrNktQpbKAq0rh%2BtKN8SW454LgpTCHOt7TJGok92WMope%2FCbhVMUly0bP%2F%2FE7oynKIm1n5BwCe0YGaRz8H6RW%2By5x697Qw5sy5%2BybRrAAG0Bi1z1%2FgkV2Wbtoj22LUXZmhoWl2hxzbihST2xCbIKTwSXOKocmqfxC6O1Cjw3qecShwpjm3Af7viw8Mr2PGq9V%2BgRo8WJbTUAC9WcIHuVTisxjQOKLoTpJ7FbM0YAaNr9PHtc63ZgTR1IcOakrmiK9AdlUO37dpKE2dpWJMzoMkxztk7h3ywrpExnGk7%2B9syNTDo%2BnzaA%3D%3D&trade_no=2018072521001004490200538558&auth_app_id=2016091700529506&version=1.0&app_id=2016091700529506&sign_type=RSA2&seller_id=2088102175982414&timestamp=2018-07-25+22%3A27%3A01 HTTP/1.1" 200 43
