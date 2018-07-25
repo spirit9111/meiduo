@@ -7250,3 +7250,208 @@ INFO 2018-07-25 18:31:47,537 basehttp 124 "GET /cart/ HTTP/1.1" 200 213
 INFO 2018-07-25 18:31:49,025 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 224
 INFO 2018-07-25 18:31:49,068 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
 INFO 2018-07-25 18:31:53,504 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 19:49:12,368 basehttp 124 "OPTIONS /orders/20180725103153000000002/payment/ HTTP/1.1" 200 0
+WARNING 2018-07-25 19:49:12,394 base 152 Not Found: /orders/20180725103153000000002/payment/
+WARNING 2018-07-25 19:49:12,394 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 404 10035
+ERROR 2018-07-25 19:57:47,033 exception 135 Internal Server Error: /orders/20180725103153000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 32, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 19:57:47,239 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 500 22915
+INFO 2018-07-25 20:02:58,612 basehttp 124 "OPTIONS /orders/20180725103153000000002/payment/ HTTP/1.1" 200 0
+ERROR 2018-07-25 20:06:25,828 exception 135 Internal Server Error: /orders/20180725103153000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 34, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 20:06:26,054 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 500 22915
+ERROR 2018-07-25 20:09:58,289 exception 135 Internal Server Error: /orders/20180725103153000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 34, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 20:09:58,378 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 500 22915
+INFO 2018-07-25 20:13:39,695 basehttp 124 "OPTIONS /orders/20180725103153000000002/payment/ HTTP/1.1" 200 0
+ERROR 2018-07-25 20:23:28,194 exception 135 Internal Server Error: /orders/20180725103153000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 34, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 20:23:28,358 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 500 22915
+INFO 2018-07-25 20:25:27,493 basehttp 124 "OPTIONS /orders/20180725103153000000002/payment/ HTTP/1.1" 200 0
+ERROR 2018-07-25 20:28:20,670 exception 135 Internal Server Error: /orders/20180725103153000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 34, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 20:28:20,914 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 500 22915
+INFO 2018-07-25 20:33:50,380 basehttp 124 "GET /orders/20180725103153000000002/payment/ HTTP/1.1" 200 830
+INFO 2018-07-25 20:36:43,328 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-07-25 20:36:43,348 views 106 Error decoding signature.
+INFO 2018-07-25 20:36:43,372 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-25 20:36:54,230 views 106 Error decoding signature.
+WARNING 2018-07-25 20:36:54,305 base 152 Not Found: /categories/115/
+WARNING 2018-07-25 20:36:54,324 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 10152
+INFO 2018-07-25 20:36:54,365 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 20:36:54,484 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1321
+INFO 2018-07-25 20:36:54,580 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+ERROR 2018-07-25 20:36:56,290 views 106 Error decoding signature.
+INFO 2018-07-25 20:36:56,310 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+ERROR 2018-07-25 20:36:57,089 views 106 Error decoding signature.
+INFO 2018-07-25 20:36:57,098 basehttp 124 "GET /cart/ HTTP/1.1" 200 2
+INFO 2018-07-25 20:37:19,460 basehttp 124 "GET /categories/115/hotskus/ HTTP/1.1" 200 702
+ERROR 2018-07-25 20:37:22,825 views 38 Error decoding signature.
+INFO 2018-07-25 20:37:22,854 basehttp 124 "POST /cart/ HTTP/1.1" 201 39
+ERROR 2018-07-25 20:37:29,437 views 106 Error decoding signature.
+INFO 2018-07-25 20:37:29,575 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 20:37:50,474 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-07-25 20:37:51,375 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 242
+INFO 2018-07-25 20:37:55,469 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-07-25 20:38:03,185 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-07-25 20:38:03,188 basehttp 124 "OPTIONS /orders/settlement/ HTTP/1.1" 200 0
+INFO 2018-07-25 20:38:03,929 basehttp 124 "GET /addresses/ HTTP/1.1" 200 617
+INFO 2018-07-25 20:38:04,100 basehttp 124 "GET /orders/settlement/ HTTP/1.1" 200 262
+INFO 2018-07-25 20:38:11,093 basehttp 124 "OPTIONS /orders/ HTTP/1.1" 200 0
+INFO 2018-07-25 20:38:13,186 basehttp 124 "POST /orders/ HTTP/1.1" 201 38
+INFO 2018-07-25 20:38:31,569 basehttp 124 "OPTIONS /orders/20180725123811000000002/payment/ HTTP/1.1" 200 0
+ERROR 2018-07-25 20:38:32,086 exception 135 Internal Server Error: /orders/20180725123811000000002/payment/
+Traceback (most recent call last):
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/spirit/Desktop/meiduo/meiduo_mall/meiduo_mall/apps/payment/views.py", line 32, in get
+    debug=True  # 默认False
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 81, in __init__
+    self._load_key()
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/alipay/__init__.py", line 89, in _load_key
+    self._app_private_key = RSA.importKey(content)
+  File "/home/spirit/.virtualenvs/py37_django/lib/python3.6/site-packages/Cryptodome/PublicKey/RSA.py", line 754, in import_key
+    raise ValueError("RSA key format is not supported")
+ValueError: RSA key format is not supported
+ERROR 2018-07-25 20:38:32,163 basehttp 124 "GET /orders/20180725123811000000002/payment/ HTTP/1.1" 500 21308
+INFO 2018-07-25 20:55:05,746 basehttp 124 "OPTIONS /orders/20180725123811000000002/payment/ HTTP/1.1" 200 0
+INFO 2018-07-25 20:55:06,216 basehttp 124 "GET /orders/20180725123811000000002/payment/ HTTP/1.1" 200 837
